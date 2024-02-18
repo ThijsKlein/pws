@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aardbevingsbestendig bouwen • Helpcentrum - pws.vqnderklein.nl</title>
+
+    <link rel="stylesheet" href="../../assets/css/main.index.css">
+    <link rel="stylesheet" href="../../assets/css/interaction.index.css">
+    <link rel="stylesheet" href="../../assets/css/api.embed.css">
+    <link rel="stylesheet" href="../../assets/css/presentatie.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="../../assets/js/graphs.js" defer></script>
+    <script src="../../assets/js/presentatieApp.js" defer></script>
+    <script src="../../assets/js/app.js" defer></script>
+    <script src="../../assets/js/bibliography.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="shortcut icon" href="../../assets/img/svg/logo.svg" type="image/x-icon">
+</head>
+
+<body style="overflow-x:visible !important;">
+    <div class="loaderContainerWrapper">
+        <div class="honeycomb">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="loader_wrapper">
+        <div class="loader_div">
+            <div class="load_1 load_item"></div>
+            <div class="load_2 load_item"></div>
+            <div class="load_3 load_item"></div>
+        </div>
+    </div>
+
+
+    <div id="0" class="active_part"></div>
+    <div class="wrapper">
+
+        <div class="top_body_wrapper pageLoader main_body">
+            <main>
+                <div class="page_controls_fixed">
+                    <span class="material-symbols-outlined up">
+                        expand_less
+                    </span>
+                    <span class="material-symbols-outlined down">
+                        expand_more
+                    </span>
+                    <span onclick="location.href='../overige-onderwerpen.html'" class="material-symbols-outlined" style="border:none !important;color:brown">
+                        exit_to_app
+                    </span>
+                </div>
+                <div class="page_controls_fixed_left">
+                    <span id="bigScreen">
+                        <svg onclick="fullScreen()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M4 15a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2H5a2 2 0 0 1-2-2v-3a1 1 0 0 1 1-1m16 0a1 1 0 0 1 .993.883L21 16v3a2 2 0 0 1-1.85 1.995L19 21h-3a1 1 0 0 1-.117-1.993L16 19h3v-3a1 1 0 0 1 1-1M19 3a2 2 0 0 1 1.995 1.85L21 5v3a1 1 0 0 1-1.993.117L19 8V5h-3a1 1 0 0 1-.117-1.993L16 3zM8 3a1 1 0 0 1 .117 1.993L8 5H5v3a1 1 0 0 1-1.993.117L3 8V5a2 2 0 0 1 1.85-1.995L5 3z"/></g></svg></span>
+                    </span>
+                </div>
+
+                <div class="page_controls_fixed_top">
+                    <div class="logoWrapper">
+                        <div class="text">
+                            <div class="title">
+                                PWS
+                            </div>
+                            <div class="subtitle">
+                                Aardbevingsbestendig bouwen
+                            </div>
+                        </div>
+                        <div class="logo">
+                            <img src="../../assets/img/svg/logo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="0">
+                    <div class="image_container">
+                        <div class="page_content_holder">
+
+                            <div class="grid_page">
+                                <div class="time_line">
+                                    <div class="line"></div>
+                                    <div class="content_timeLine_wrapper">
+                                        <div class="menu">
+                                            <a pageLocation="0" onclick="goToPart(this.getAttribute('pageLocation'))">Start</a>
+                                            <a pageLocation="1" onclick="goToPart(this.getAttribute('pageLocation'))" class="active">Inhoud</a>
+                                            <a pageLocation="2" onclick="goToPart(this.getAttribute('pageLocation'))">Proces</a>
+                                            <a pageLocation="3" onclick="goToPart(this.getAttribute('pageLocation'))">Onderzoek</a>
+                                            <a pageLocation="4" onclick="goToPart(this.getAttribute('pageLocation'))">Resultaten</a>
+                                            <a pageLocation="5" onclick="goToPart(this.getAttribute('pageLocation'))">Website</a>
+                                            <a pageLocation="6" onclick="goToPart(this.getAttribute('pageLocation'))">Vragen</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_holder">
+                                    <div class="inner_main_content">
+                                        <div class="center">
+                                            <div class="contentInsideCenter">
+                                                <div class="mainTitle">
+                                                    PRESENTATIE
+                                                </div>
+                                                <div class="mainSubTitle">
+                                                    Aardbevingsbestendig bouwen
+                                                </div>
+                                                <br>
+                                                <div class="mainSmallSubTitle">
+                                                    Sohrab Akhoundzadeh & Thijs van der Klein
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="1">
+                    <div class="image_container">
+                        <div class="page_content_holder">
+                            <div class="grid_page">
+                                <div class="time_line">
+                                    <div class="line"></div>
+                                    <div class="content_timeLine_wrapper">
+                                        <div class="menu">
+                                            <a pageLocation="0" onclick="goToPart(this.getAttribute('pageLocation'))">Start</a>
+                                            <a pageLocation="1" onclick="goToPart(this.getAttribute('pageLocation'))" class="active">Inhoud</a>
+                                            <a pageLocation="2" onclick="goToPart(this.getAttribute('pageLocation'))">Proces</a>
+                                            <a pageLocation="3" onclick="goToPart(this.getAttribute('pageLocation'))">Onderzoek</a>
+                                            <a pageLocation="4" onclick="goToPart(this.getAttribute('pageLocation'))">Resultaten</a>
+                                            <a pageLocation="5" onclick="goToPart(this.getAttribute('pageLocation'))">Website</a>
+                                            <a pageLocation="6" onclick="goToPart(this.getAttribute('pageLocation'))">Vragen</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_holder">
+                                    <div class="inner_main_content">
+                                        <div class="right">
+                                            <div>
+                                                <div class="pageTitle">
+                                                    INHOUD
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        ONS PROCES
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        maatschappelijk belang, hypothese, praktisch onderzoek
+                                                    </div>
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        ONS ONDERZOEK
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        onderzoeksvraag, deelvragen </div>
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        ONZE RESULTATEN
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        wat zijn we te weten gekomen? </div>
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        WEBSITE
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        doel, rondleiding, model </div>
+                                                </div>
+                                            </div>
+                                            <div class="imageWrapper">
+                                                <img onclick="fullSizeImage(this.src)" src="../../assets/img/Presentatie2.jpeg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="2">
+                    <div class="image_container">
+                        <div class="page_content_holder">
+
+                            <div class="grid_page">
+                                <div class="time_line">
+                                    <div class="line"></div>
+                                    <div class="content_timeLine_wrapper">
+                                        <div class="menu">
+                                            <a pageLocation="0" onclick="goToPart(this.getAttribute('pageLocation'))">Start</a>
+                                            <a pageLocation="1" onclick="goToPart(this.getAttribute('pageLocation'))">Inhoud</a>
+                                            <a pageLocation="2" onclick="goToPart(this.getAttribute('pageLocation'))" class="active">Proces</a>
+                                            <a pageLocation="3" onclick="goToPart(this.getAttribute('pageLocation'))">Onderzoek</a>
+                                            <a pageLocation="4" onclick="goToPart(this.getAttribute('pageLocation'))">Resultaten</a>
+                                            <a pageLocation="5" onclick="goToPart(this.getAttribute('pageLocation'))">Website</a>
+                                            <a pageLocation="6" onclick="goToPart(this.getAttribute('pageLocation'))">Vragen</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_holder">
+                                    <div class="inner_main_content">
+                                        <div class="right">
+                                            <div>
+                                                <div class="pageTitle">
+                                                    PROCES
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        MAATSCHAPPELIJK BELANG
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Woningcrisis, Groningen (28.509), aardbevingsgebied, <br>bevingen, tijd voor actie
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        HYPOTHESE
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Bestaande oplossingen, niet duurzaam, kijken <br>of het beter kan
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        PRAKTISCH ONDERZOEK
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Bestaande oplossingen, niet duurzaam, waar zit <br>innovatie</div>
+                                                </div>
+                                            </div>
+                                            <div class="imageWrapper">
+                                                <div class="slideshow-container" id="slideshow1">
+
+                                                    <div class="mySlides">
+                                                        <img style="max-height:75%;" onclick="fullSizeImage(this.src)" src="../../assets/img/houtskeletbouw.jpg" alt="Slide 2">
+                                                        <div class="imageNote "> <b>
+                                                            Afbeelding 2
+                                                         </b> Houtbouw is de toekomst </div>
+                                                    </div>
+                                                    <div class="mySlides">
+                                                        <img style="max-height:75%;" onclick="fullSizeImage(this.src)" src="../../assets/img/resultaten-en-verwerking-afbeelding01.jpg" alt="Slide 2">
+                                                        <div class="imageNote "> <b>
+                                                            Afbeelding 3
+                                                         </b> Opstelling praktisch onderzoek </div>
+                                                    </div>
+
+                                                    <div class="mySlides" style="display:block;">
+                                                        <img onclick="fullSizeImage(this.src)" src="../../assets/img/groningenIsKapot.jpg" alt="Slide 3">
+                                                        <div class="imageNote "> <b>
+                                                            Afbeelding 1
+                                                         </b> Maatschappelijk belang </div>
+                                                    </div>
+
+
+
+                                                    <a class="prev" onclick="plusSlidesPresentatie(1, 'slideshow1')">&#10094;</a>
+                                                    <a class="next" onclick="plusSlidesPresentatie(-1, 'slideshow1')">&#10095;</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="3">
+                    <div class="image_container">
+                        <div class="page_content_holder">
+
+                            <div class="grid_page">
+                                <div class="time_line">
+                                    <div class="line"></div>
+                                    <div class="content_timeLine_wrapper">
+                                        <div class="menu">
+                                            <a pageLocation="0" onclick="goToPart(this.getAttribute('pageLocation'))">Start</a>
+                                            <a pageLocation="1" onclick="goToPart(this.getAttribute('pageLocation'))">Inhoud</a>
+                                            <a pageLocation="2" onclick="goToPart(this.getAttribute('pageLocation'))">Proces</a>
+                                            <a pageLocation="3" onclick="goToPart(this.getAttribute('pageLocation'))" class="active">Onderzoek</a>
+                                            <a pageLocation="4" onclick="goToPart(this.getAttribute('pageLocation'))">Resultaten</a>
+                                            <a pageLocation="5" onclick="goToPart(this.getAttribute('pageLocation'))">Website</a>
+                                            <a pageLocation="6" onclick="goToPart(this.getAttribute('pageLocation'))">Vragen</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_holder">
+                                    <div class="inner_main_content">
+                                        <div class="right">
+                                            <div>
+                                                <div class="pageTitle">
+                                                    ONDERZOEK
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        WAT ZIJN AARDBEVINGEN
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Plotselinge bewegingen, tektonische aardplaten, veel <br> energie komt vrij, trillingen schokgolven en verschuivingen,<br> schaalverdeling 1-10
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        HUIDIGE OPLOSSINGEN
+
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Versterken, dempers, schuivers, 'base isolation' </div>
+                                                </div>
+                                                <br>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        WAT IS DE TOEKOMST?
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Lichtbouw, houtbouw, acceptatie van schade
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="imageWrapper">
+                                                <!-- <img onclick="fullSizeImage(this.src)" src="../../assets/img/Presentatie2.jpeg" alt=""> -->
+                                                <div class="slideshow-container" id="slideshow2">
+
+                                                    <div class="mySlides">
+                                                        <img onclick="fullSizeImage(this.src)" src="../../assets/video/gif/P-wave2.gif" alt="Slide 3">
+                                                        <div class="imageNote "> <b>
+                                                            GIF 1
+                                                         </b> P-golven (radiaal)</div>
+                                                    </div>
+                                                    <div class="mySlides">
+                                                        <img onclick="fullSizeImage(this.src)" src="../../assets/video/gif/S_wave2.gif" alt="Slide 3">
+                                                        <div class="imageNote "> <b>
+                                                            GIF 2
+                                                         </b> S-golven (radiaal)</div>
+                                                    </div>
+                                                    <div class="mySlides">
+                                                        <img onclick="fullSizeImage(this.src)" src="https://pws.vqnderklein.nl/assets/img/deelvraag-4.1-image2.jpg" alt="Slide 2">
+                                                        <div class="imageNote "> <b>
+                                                            Afbeelding 2
+                                                         </b> 'Base isolation'</div>
+                                                    </div>
+                                                    <div class="mySlides">
+                                                        <video src="https://pws.vqnderklein.nl/assets/video/base-isolation-system-480-ytshorts.savetube.me.mp4" controls></video>
+                                                        <div class="imageNote "> <b>
+                                                           Video 1
+                                                         </b> 'Base isolation' in actie (simulatie)</div>
+                                                    </div>
+                                                    <div class="mySlides">
+                                                        <img onclick="fullSizeImage(this.src)" src="https://pws.vqnderklein.nl/assets/img/deelvraag-4.1-image9.jpeg" alt="Slide 2">
+                                                        <div class="imageNote "> <b>
+                                                            Afbeelding 3
+                                                         </b> Houtbouw</div>
+                                                    </div>
+                                                    <div class="mySlides" style="display:block;">
+                                                        <img onclick="fullSizeImage(this.src)" src="../../assets/img/deelvraag-1.1-image.1.png" alt="Slide 2">
+                                                        <div class="imageNote "> <b>
+                                                            Afbeelding 1
+                                                         </b> Aardbevingen</div>
+                                                    </div>
+
+
+
+
+
+                                                    <a class="prev" onclick="plusSlidesPresentatie(1, 'slideshow2')">&#10094;</a>
+                                                    <a class="next" onclick="plusSlidesPresentatie(-1, 'slideshow2')">&#10095;</a>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="4">
+                    <div class="image_container">
+                        <div class="page_content_holder">
+
+                            <div class="grid_page">
+                                <div class="time_line">
+                                    <div class="line"></div>
+                                    <div class="content_timeLine_wrapper">
+                                        <div class="menu">
+                                            <a pageLocation="0" onclick="goToPart(this.getAttribute('pageLocation'))">Start</a>
+                                            <a pageLocation="1" onclick="goToPart(this.getAttribute('pageLocation'))">Inhoud</a>
+                                            <a pageLocation="2" onclick="goToPart(this.getAttribute('pageLocation'))">Proces</a>
+                                            <a pageLocation="3" onclick="goToPart(this.getAttribute('pageLocation'))">Onderzoek</a>
+                                            <a pageLocation="4" onclick="goToPart(this.getAttribute('pageLocation'))" class="active">Resultaten</a>
+                                            <a pageLocation="5" onclick="goToPart(this.getAttribute('pageLocation'))">Website</a>
+                                            <a pageLocation="6" onclick="goToPart(this.getAttribute('pageLocation'))">Vragen</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_holder">
+                                    <div class="inner_main_content">
+                                        <div class="right">
+                                            <div>
+                                                <div class="pageTitle">
+                                                    RESULTATEN
+                                                </div>
+
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        PRAKTISCH ONDERZOEK
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Trilplaat, Tjeerd Faase, eigen constructies, testen
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        CONCLUSIE
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Veel ideeën onhaalbaar, duurzaam noodzaak, bamboe, <br>hout, afweging essentieel </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="imageWrapper">
+                                                <div class="slideshow-container" id="slideshow3">
+                                                    <div class="mySlides">
+
+                                                        <canvas id="myChart" height="1600"></canvas>
+                                                        <div class="imageNote "> <b>
+                                                                Grafiek 1
+                                                            </b> Betonklasse uitgezet tegen de druk (MPa) dat het aankan in cilinder- en kubusvorm </div>
+
+
+                                                    </div>
+                                                    <div class="mySlides">
+                                                        <canvas id="numberOfEarthquakes" class="canvas" height="1400" width="2000" style="width:555px !important"></canvas>
+                                                        <div class="imageNote "> <b>
+                                                        Grafiek 2
+                                                        </b> Het aantal aardbevingen per </div>
+                                                    </div>
+
+                                                    <div class="mySlides">
+                                                        <img onclick="fullSizeImage(this.src)" src="../../assets/img/graph.png" alt="Slide 2">
+                                                        <div class="imageNote "> <b>
+                                                           Afbeelding 1
+                                                        </b> Magnitude uitgezet tegen diepte </div>
+                                                    </div>
+
+                                                    <div class="mySlides" style="display:block;">
+                                                        <img onclick="fullSizeImage(this.src)" src="../../assets/img/PresentatieIMG4.jpeg" alt="Slide 3">
+                                                        <div class="imageNote "> <b>
+                                                            Afbeelding 2
+                                                        </b> Het resultaat van een aardbeving </div>
+                                                    </div>
+                                                    <div class="mySlides">
+                                                        <video controls src="../../assets/video/resultaten-en-verwerking-video02.mp4"></video>
+                                                        <div class="imageNote "> <b>
+                                                           Video 1
+                                                        </b> Werking van de trilplaat </div>
+                                                    </div>
+                                                    <div class="mySlides">
+                                                        <video controls src="../../assets/video/resultaten-en-verwerking-video04.mp4"></video>
+                                                        <div class="imageNote "> <b>
+                                                           Video 2
+                                                        </b> Constructie op de trilplaat </div>
+                                                    </div>
+
+                                                    <a class="prev" onclick="plusSlidesPresentatie(1, 'slideshow3')">&#10094;</a>
+                                                    <a class="next" onclick="plusSlidesPresentatie(-1, 'slideshow3')">&#10095;</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="5">
+                    <div class="image_container">
+                        <div class="page_content_holder">
+
+                            <div class="grid_page">
+                                <div class="time_line">
+                                    <div class="line"></div>
+                                    <div class="content_timeLine_wrapper">
+                                        <div class="menu">
+                                            <a pageLocation="0" onclick="goToPart(this.getAttribute('pageLocation'))">Start</a>
+                                            <a pageLocation="1" onclick="goToPart(this.getAttribute('pageLocation'))">Inhoud</a>
+                                            <a pageLocation="2" onclick="goToPart(this.getAttribute('pageLocation'))">Proces</a>
+                                            <a pageLocation="3" onclick="goToPart(this.getAttribute('pageLocation'))">Onderzoek</a>
+                                            <a pageLocation="4" onclick="goToPart(this.getAttribute('pageLocation'))">Resultaten</a>
+                                            <a pageLocation="5" onclick="goToPart(this.getAttribute('pageLocation'))" class="active">Website</a>
+                                            <a pageLocation="6" onclick="goToPart(this.getAttribute('pageLocation'))">Vragen</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_holder">
+                                    <div class="inner_main_content">
+                                        <div class="right">
+                                            <div>
+                                                <div class="pageTitle">
+                                                    WEBSITE
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        DOEL
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Interactief maken, jonge mensen bereiken, visueler <br>maken, creatiever
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        RONDLEIDING
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Waar staat wat? Deelvragen, resultaten & conclusie,<br> simulatie
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        SIMULATIE
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Op basis van ons onderzoek, bouw je eigen huis
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="imageWrapper" style="display:flex;align-items:center;">
+                                                <div>
+                                                    <img onclick="fullSizeImage(this.src)" style="max-width: 100%;" src="../../assets/img/app-image-5.png" alt="">
+                                                    <div class="imageNote "> <b>
+                                                      Afbeelding 1
+                                                        </b> Materiaal selector simulatie</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="6">
+                    <div class="image_container">
+                        <div class="page_content_holder">
+
+                            <div class="grid_page">
+                                <div class="time_line">
+                                    <div class="line"></div>
+                                    <div class="content_timeLine_wrapper">
+                                        <div class="menu">
+                                            <a pageLocation="0" onclick="goToPart(this.getAttribute('pageLocation'))">Start</a>
+                                            <a pageLocation="1" onclick="goToPart(this.getAttribute('pageLocation'))">Inhoud</a>
+                                            <a pageLocation="2" onclick="goToPart(this.getAttribute('pageLocation'))">Proces</a>
+                                            <a pageLocation="3" onclick="goToPart(this.getAttribute('pageLocation'))">Onderzoek</a>
+                                            <a pageLocation="4" onclick="goToPart(this.getAttribute('pageLocation'))">Resultaten</a>
+                                            <a pageLocation="5" onclick="goToPart(this.getAttribute('pageLocation'))">Website</a>
+                                            <a pageLocation="6" onclick="goToPart(this.getAttribute('pageLocation'))" class="active">Vragen</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_content_holder">
+                                    <div class="inner_main_content">
+                                        <div class="right">
+                                            <div>
+                                                <div class="pageTitle">
+                                                    VRAGEN
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                        NOG ONDUIDELIJKHEDEN?
+                                                    </div>
+                                                </div>
+                                                <div class="navbarInformation">
+
+                                                </div>
+                                                <div class="navbarInformation">
+                                                    <div class="navbarTitle">
+                                                    </div>
+                                                    <div class="navbarSubTitle">
+                                                        Later toch nog een vraag? Je kan ons altijd bereiken via
+                                                    </div>
+                                                </div>
+                                                <div class="navbarSubTitle" style="margin-bottom:1em;">
+                                                    <b>EMAIL</b><br><br>
+                                                    <span id="special">thijs@pws.vqnderklein.nl</span><br><br> <span id="special">sohrab@pws.vqnderklein.nl</span> </div>
+                                                <br>
+                                                <div class="navbarSubTitle">
+                                                    <b>WEBSITE</b><br><br>
+                                                    <span id="special">https://pws.vqnderklein.nl</span>
+                                                </div>
+                                            </div>
+                                            <div class="imageWrapper">
+                                                <div>
+                                                    <img onclick="fullSizeImage(this.src)" src="../../assets/img/contact.png" alt="">
+                                                    <div class="imageNote "> <b>
+                                                        Afbeelding 1
+                                                          </b> Contactpagina</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

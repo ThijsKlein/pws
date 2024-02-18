@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Drop Animation</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<div class="loaderContainerWrapper">
+        <div class="honeycomb">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div><body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Set up the scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Set the initial position of the camera
+        camera.position.z = 15;
+
+        // Function to add an object with a drop animation
+        function addObjectWithDropAnimation(geometry, material, position) {
+            const object = new THREE.Mesh(geometry, material);
+            object.position.copy(position);
+            scene.add(object);
+
+            const dropDuration = 1; // Duration in seconds
+            let elapsedTime = 0;
+
+            function animate() {
+                requestAnimationFrame(animate);
+
+                // Update the elapsed time
+                elapsedTime += 0.024; // Assuming 60fps
+
+                // Drop the object over time
+                if (elapsedTime < dropDuration) {
+                    const dropProgress = elapsedTime / dropDuration;
+                    object.position.y = position.y - position.y * dropProgress;
+                }
+
+                renderer.render(scene, camera);
+            }
+
+            animate();
+        }
+
+        // Example usage
+        const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
+        const boxMaterial = new THREE.MeshBasicMaterial({
+            color: Math.random() * 0xffffff
+        });
+
+        addObjectWithDropAnimation(boxGeometry, boxMaterial, new THREE.Vector3(0, 5, 0));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+.sourceEmbed {
+    position: absolute;
+    bottom: 40px;
+    width: 400px;
+    padding: 1em;
+    display: none;
+    line-height: 1.2;
+    color: white;
+    right: -155%;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    cursor: auto;
+}
+
+.sourceEmbed span {
+    margin-left: 5px;
+}
+
+.sourceEmbed span:first-child,
+.sourceEmbed span:nth-child(5) {
+    margin-left: 0px;
+}
+
+.citationSource {
+    position: relative;
+}
+
+.SourceWriter {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #a3a3a5;
+}
+
+.sourceEmbed::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    bottom: -20px;
+    width: 0;
+    z-index: 1;
+    rotate: 90deg;
+    right: 90%;
+    border: medium solid white;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent rgb(39, 39, 39);
+}
+
+.sourceName {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.sourceTitle {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.SourceSource {
+    font-size: 12px;
+}
+
+.SourceSource b {
+    text-decoration: underline;
+    font-weight: normal;
+    color: white !important;
+    font-style: italic;
+}
+
+.sourceSeenDate {
+    font-size: 13px;
+    color: grey;
+}
+
+.sourceAuthor {
+    font-size: 13px;
+    font-weight: bold;
+    color: #babbbd !important;
+}
+
+.sourceURL a {
+    font-family: monospace;
+    color: rgb(195, 190, 190);
+    line-height: 1;
+    padding-top: 5px;
+    z-index: 100;
+    position: relative;
+}
+
+.sourceDate {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+}

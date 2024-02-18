@@ -1,0 +1,5 @@
+ErrorDocument 400 https://pws.vqnderklein.nl/helpcentrum/overige-onderwerpen/website-errors.html#400
+ErrorDocument 401 https://pws.vqnderklein.nl/helpcentrum/overige-onderwerpen/website-errors.html#401
+ErrorDocument 403 https://pws.vqnderklein.nl/helpcentrum/overige-onderwerpen/website-errors.html#403
+ErrorDocument 404 https://pws.vqnderklein.nl/helpcentrum/overige-onderwerpen/website-errors.html#404
+ErrorDocument 500 https://pws.vqnderklein.nl/helpcentrum/overige-onderwerpen/website-errors.html#500

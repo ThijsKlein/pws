@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PWS model</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<div class="loaderContainerWrapper">
+        <div class="honeycomb">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div><body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        const tileSize = 10;
+        let currentFloor = 0;
+
+        const scene = new THREE.Scene();
+
+        const topViewCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const sideViewCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        sideViewCamera.position.set(50, 50, 50); // Adjust the position
+        sideViewCamera.lookAt(0, 0, 0);
+
+        const startCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        startCamera.position.set(120, 50, 120);
+        startCamera.lookAt(-100, -100, -100);
+        scene.add(startCamera);
+
+        const cameras = [topViewCamera, sideViewCamera];
+        let activeCamera = startCamera; // Set the start camera as the initial active camera
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let isDragging = false;
+
+        const smoothness = 0.9;
+        const maxVerticalRotation = Math.PI;
+
+        let animationFrameId = null;
+        let rotationSpeedX = 0;
+        let rotationSpeedY = 0;
+
+        function onWindowResize() {
+            cameras.forEach(camera => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+            });
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function onMouseMove(event) {
+            if (isDragging && activeCamera !== startCamera) {
+                const newMouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                const newMouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+                const movementX = newMouseX - mouseX;
+                const movementY = newMouseY - mouseY;
+
+                mouseX = newMouseX;
+                mouseY = newMouseY;
+
+                const targetRotationY = activeCamera.rotation.y + movementX * Math.PI * smoothness;
+                const targetRotationX = activeCamera.rotation.x + movementY * Math.PI * smoothness;
+
+                activeCamera.rotation.x += rotationSpeedX;
+                activeCamera.rotation.y += rotationSpeedY;
+
+                activeCamera.rotation.x = Math.max(-maxVerticalRotation, Math.min(maxVerticalRotation, activeCamera.rotation.x));
+            }
+        }
+
+        function onMouseDown(event) {
+            isDragging = true;
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            cancelAnimationFrame(animationFrameId);
+        }
+
+        function onMouseUp() {
+            isDragging = false;
+            animateRotation();
+        }
+
+        function switchCamera(newCamera) {
+            if (newCamera === topViewCamera) {
+                newCamera.position.set(0, 150, 0); // Higher position for top view
+                newCamera.lookAt(0, 0, 0);
+                newCamera.fov = 45; // Adjust the field of view
+                newCamera.updateProjectionMatrix(); // Update projection matrix after changing FOV
+            } else if (newCamera === sideViewCamera) {
+                newCamera.position.set(120, 50, 120); // Increase the z component
+                newCamera.lookAt(-100, -100, -100);
+            }
+
+            activeCamera = newCamera;
+        }
+
+        window.addEventListener('resize', onWindowResize, false);
+        window.addEventListener('mousedown', onMouseDown, false);
+        window.addEventListener('mousemove', onMouseMove, false);
+        window.addEventListener('mouseup', onMouseUp, false);
+
+        window.addEventListener('keydown', function(event) {
+            switch (event.key) {
+                case '1':
+                    switchCamera(topViewCamera);
+                    console.log('Top');
+                    break;
+                case '2':
+                    switchCamera(sideViewCamera);
+                    console.log('Side');
+                    break;
+            }
+        });
+
+        function animateRotation() {
+            rotationSpeedX *= 0.95;
+            rotationSpeedY *= 0.95;
+
+            activeCamera.rotation.x += rotationSpeedX;
+            activeCamera.rotation.y += rotationSpeedY;
+
+            if (Math.abs(rotationSpeedX) > 0.001 || Math.abs(rotationSpeedY) > 0.001) {
+                animationFrameId = requestAnimationFrame(animateRotation);
+            }
+        }
+
+        window.addEventListener('click', onClick, false);
+
+        function onClick(event) {
+            const tileSize = 10; // Adjust the tile size as needed
+
+            const raycaster = new THREE.Raycaster();
+            const mouse = new THREE.Vector2();
+
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, activeCamera);
+
+            const intersects = raycaster.intersectObjects(scene.children, true);
+
+            if (intersects.length > 0) {
+                const point = intersects[0].point;
+
+                // Round the position to the nearest tile
+                const roundedX = Math.round(point.x / tileSize) * tileSize;
+                const roundedY = Math.round(point.y / tileSize) * tileSize;
+                const roundedZ = Math.round(point.z / tileSize) * tileSize;
+
+                const redObjectGeometry = new THREE.BoxGeometry(tileSize, tileSize, 1);
+                const redObjectMaterial = new THREE.MeshBasicMaterial({
+                    color: 0xff0000
+                });
+                const redObject = new THREE.Mesh(redObjectGeometry, redObjectMaterial);
+
+                // Determine if the clicked line is vertical or horizontal
+                const isVerticalLine = Math.abs(point.x - roundedX) < 0.01;
+                const isHorizontalLine = Math.abs(point.y - roundedY) < 0.01;
+
+                // Set rotation based on the type of line clicked
+                if (isVerticalLine) {
+                    redObject.rotation.set(0, Math.PI / 2, 0); // 90 degrees rotation
+                    redObject.position.set(roundedX, roundedY, roundedZ);
+                } else if (isHorizontalLine) {
+                    redObject.rotation.set(0, 0, 0); // 0 degrees rotation
+                    redObject.position.set(roundedX, roundedY, roundedZ);
+                }
+
+                redObject.kind = 'Wall';
+                scene.add(redObject);
+
+                // Check for connections after the red object is added
+                checkConnections(redObject);
+            }
+        }
+
+        function checkConnections(redObject) {
+            const redObjects = scene.children.filter(obj => {
+                return obj instanceof THREE.Mesh &&
+                    obj !== redObject &&
+                    obj.material.color.getHex() === 0xff0000;
+            });
+
+            for (const otherRedObject of redObjects) {
+                if (redObject.position.distanceTo(otherRedObject.position) < tileSize) {
+                    // Calculate midpoint between the two red objects
+                    const midpointX = (redObject.position.x + otherRedObject.position.x) / 2;
+                    const midpointY = (redObject.position.y + otherRedObject.position.y) / 2;
+                    const midpointZ = (redObject.position.z + otherRedObject.position.z) / 2;
+
+                    if (redObject.rotation.y === otherRedObject.rotation.y) {
+                        // If x and y connect, place a white object
+                        placeYellowObject(midpointX, midpointY, midpointZ);
+                    } else {
+                        // If x and y don't connect, place a yellow object
+                        placeWhiteObject(midpointX, midpointY, midpointZ);
+                    }
+                }
+            }
+        }
+
+        let whiteObjects = [];
+
+        function placeWhiteObject(x, y, z) {
+            const whiteObjectGeometry = new THREE.BoxGeometry(tileSize / 10, tileSize, 1);
+            const whiteObjectMaterial = new THREE.MeshBasicMaterial({
+                color: 'white'
+            });
+            const whiteObject = new THREE.Mesh(whiteObjectGeometry, whiteObjectMaterial);
+
+            whiteObject.position.set(x, y, z);
+            scene.add(whiteObject);
+            whiteObject.kind = 'Connection';
+            whiteObjects.push(whiteObject);
+        }
+
+        function placeYellowObject(x, y, z) {
+            // Check if there is a white object at the same position
+            const isWhiteObjectAtPosition = whiteObjects.some(whiteObject => {
+                return (
+                    Math.abs(whiteObject.position.x - x) < 0.01 &&
+                    Math.abs(whiteObject.position.y - y) < 0.01 &&
+                    Math.abs(whiteObject.position.z - z) < 0.01
+                );
+            });
+
+            // Only place a yellow object if there is no white object at the same position
+            if (!isWhiteObjectAtPosition) {
+                const yellowObjectGeometry = new THREE.BoxGeometry(tileSize / 10, tileSize, 1);
+                const yellowObjectMaterial = new THREE.MeshBasicMaterial({
+                    color: 'yellow'
+                });
+                const yellowObject = new THREE.Mesh(yellowObjectGeometry, yellowObjectMaterial);
+
+                yellowObject.position.set(x, y, z);
+
+                // Check if the line is on the y or x-axis, and adjust the rotation accordingly
+                if (Math.abs(x % tileSize) < 0.01) {
+                    yellowObject.rotation.set(0, Math.PI / 2, 0); // 90 degrees rotation for y-axis
+                } else if (Math.abs(y % tileSize) < 0.01) {
+                    yellowObject.rotation.set(0, 0, 0); // 0 degrees rotation for x-axis
+                }
+
+                scene.add(yellowObject);
+                yellowObject.kind = 'Support';
+            }
+        }
+
+        window.addEventListener('mousedown', onLeftMouseDown, false);
+
+        function onLeftMouseDown(event) {
+            if (event.button === 2) { // Check if the left mouse button is clicked
+                const raycaster = new THREE.Raycaster();
+                const mouse = new THREE.Vector2();
+
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+                raycaster.setFromCamera(mouse, activeCamera);
+
+                const intersects = raycaster.intersectObjects(scene.children, true);
+
+                if (intersects.length > 0) {
+                    const clickedObject = intersects[0].object;
+
+                    if (clickedObject.material && clickedObject.material.color && clickedObject.kind !== "grid" && clickedObject.kind !== "layer1" && clickedObject.kind !== "layer2") {
+                        console.log(clickedObject.material.color.getHex());
+                        scene.remove(clickedObject);
+                    }
+                }
+            }
+        }
+
+        window.addEventListener('keydown', function(event) {
+            const objectsInScene = scene.children;
+
+            let deltaX = 0;
+            let deltaY = 0;
+
+            switch (event.key) {
+                case 'ArrowUp':
+                    deltaY = -tileSize;
+                    console.log(currentFloor);
+                    floorUp();
+                    currentFloor++;
+                    break;
+                case 'ArrowDown':
+                    if (currentFloor === 0) {
+                        break;
+                    }
+                    console.log(currentFloor);
+                    deltaY = tileSize;
+                    currentFloor -= 1;
+                    floorDown();
+                    break;
+            }
+
+            if (deltaX !== 0 || deltaY !== 0) {
+                objectsInScene.forEach(object => {
+                    if (object.kind === 'grid') {
+                        object.position.y = deltaY;
+                        const newColor = new THREE.Color('#424242');
+                        const newMaterial = new THREE.MeshBasicMaterial({
+                            color: newColor
+                        });
+                        object.material = newMaterial;
+
+                        moveObjectsWithGrid(deltaX, deltaY);
+                    }
+                });
+            }
+        });
+
+        function floorUp() {
+            const gridHelper2 = new THREE.GridHelper(200, 20, getRandomColor(), getRandomColor());
+            scene.add(gridHelper2);
+            gridHelper2.kind = 'floor' + currentFloor;
+            gridHelper2.position.y = -tileSize * currentFloor; // Adjust the position for new floor
+        }
+
+        function floorDown() {
+            if (currentFloor === 0) {
+                console.log('floorDown not possible!');
+            } else {
+                const gridHelperToRemove = scene.getObjectByName('floor' + currentFloor);
+                scene.remove(gridHelperToRemove);
+            }
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function moveObjectsWithGrid(deltaX, deltaY) {
+            const objectsInScene = scene.children;
+
+            objectsInScene.forEach(object => {
+                if (object instanceof THREE.Mesh && object.kind !== 'grid' && object.kind !== 'layer1' && object.kind !== 'layer2') {
+                    object.position.y = deltaY;
+                }
+            });
+        }
+
+        function render() {
+            requestAnimationFrame(render);
+            renderer.render(scene, activeCamera);
+        }
+
+        render();
+    </script>
+</body>
+
+</html>

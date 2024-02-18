@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3D Box with Customized Drag Controls and Restricted Vertical Rotation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<div class="loaderContainerWrapper">
+        <div class="honeycomb">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div><body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Set up the scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Create a box geometry
+        const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
+
+        // Create a material with a ground color
+        const boxMaterial = new THREE.MeshBasicMaterial({
+            color: 0x00ff00
+        });
+
+        // Combine geometry and material to create a mesh (the box)
+        const box = new THREE.Mesh(boxGeometry, boxMaterial);
+        scene.add(box);
+
+        // Set the initial position of the camera
+        camera.position.z = 5;
+
+        // Variables to store mouse position and drag status
+        let mouseX = 0;
+        let mouseY = 0;
+        let isDragging = false;
+
+        // Variables for smoothness and restricted vertical rotation
+        const smoothness = 0.9;
+        const maxVerticalRotation = Math.PI / 6; // 30 degrees
+
+        // Variables for slow down animation
+        let animationFrameId = null;
+        let rotationSpeedX = 0;
+        let rotationSpeedY = 0;
+
+        // Function to handle window resizing
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        // Function to handle mouse movements while dragging
+        function onMouseMove(event) {
+            // Update mouse position only if dragging
+            if (isDragging) {
+                const newMouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                const newMouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+                // Calculate the mouse movement since the last frame
+                const movementX = newMouseX - mouseX;
+                const movementY = newMouseY - mouseY;
+
+                // Update the current mouse position
+                mouseX = newMouseX;
+                mouseY = newMouseY;
+
+                // Apply mouse movement to the cube's rotation with easing
+                const targetRotationY = box.rotation.y + movementX * Math.PI * smoothness;
+                const targetRotationX = box.rotation.x + movementY * Math.PI * smoothness;
+
+                // Use easing effect to slow down the rotation gradually
+                rotationSpeedX = (targetRotationX - box.rotation.x) * 0.55;
+                rotationSpeedY = (targetRotationY - box.rotation.y) * 0.55;
+
+                // Update the cube rotation with the new rotation speed
+                box.rotation.x += rotationSpeedX;
+                box.rotation.y += rotationSpeedY;
+
+                // Restrict vertical rotation
+                box.rotation.x = Math.max(-maxVerticalRotation, Math.min(maxVerticalRotation, box.rotation.x));
+            }
+        }
+
+        // Function to handle mouse drag start
+        function onMouseDown(event) {
+            isDragging = true;
+            // Store mouse position on drag start
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            // Clear any existing animation frame
+            cancelAnimationFrame(animationFrameId);
+        }
+
+        // Function to handle mouse drag end
+        function onMouseUp() {
+            isDragging = false;
+            // Start the slow down animation
+            animateRotation();
+        }
+
+        // Add event listeners for drag interactions
+        window.addEventListener('resize', onWindowResize, false);
+        window.addEventListener('mousedown', onMouseDown, false);
+        window.addEventListener('mousemove', onMouseMove, false);
+        window.addEventListener('mouseup', onMouseUp, false);
+
+        // Function to animate cube rotation slowdown
+        function animateRotation() {
+            // Reduce the rotation speed with an easing effect
+            rotationSpeedX *= 0.95;
+            rotationSpeedY *= 0.95;
+
+            // Update the cube rotation with the new rotation speed
+            box.rotation.x += rotationSpeedX;
+            box.rotation.y += rotationSpeedY;
+
+            // Continue the animation until the rotation speed is very close to zero
+            if (Math.abs(rotationSpeedX) > 0.001 || Math.abs(rotationSpeedY) > 0.001) {
+                animationFrameId = requestAnimationFrame(animateRotation);
+            }
+        }
+
+        // Function to render the scene
+        function render() {
+            requestAnimationFrame(render);
+            renderer.render(scene, camera);
+        }
+
+        render();
+    </script>
+</body>
+
+</html>

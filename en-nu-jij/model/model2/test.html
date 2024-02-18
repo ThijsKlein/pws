@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiaal Test Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        select,
+        button,
+        input {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<div class="loaderContainerWrapper">
+        <div class="honeycomb">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div><body>
+    <div id="container">
+        <h2>Materiaal Test Lab</h2>
+
+        <label for="material">Selecteer materiaal:</label>
+        <select id="material">
+      <option value="staal">Staal</option>
+      <option value="beton">Beton</option>
+      <option value="hout">Hout</option>
+    </select>
+
+        <label for="strength">Druksterkte (MPa):</label>
+        <input type="number" id="strength" placeholder="Voer druksterkte in">
+
+        <label for="elasticity">Elasticiteitsmodulus (GPa):</label>
+        <input type="number" id="elasticity" placeholder="Voer elasticiteitsmodulus in">
+
+        <label for="richterScale">Schaal van Richter voor aardbeving:</label>
+        <input type="number" id="richterScale" step="0.1" placeholder="Voer schaal van Richter in">
+
+        <button onclick="runTensileTest()">Voer trektest uit</button>
+
+        <h3>Resultaten</h3>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        function runTensileTest() {
+            const material = document.getElementById('material').value;
+            const strength = parseFloat(document.getElementById('strength').value);
+            const elasticity = parseFloat(document.getElementById('elasticity').value);
+            const richterScale = parseFloat(document.getElementById('richterScale').value);
+
+            if (isNaN(strength) || isNaN(elasticity) || isNaN(richterScale)) {
+                alert('Voer geldige waarden in voor druksterkte, elasticiteitsmodulus en schaal van Richter.');
+                return;
+            }
+
+            // Converteer de schaal van Richter naar aardbevingsterkte
+            const earthquakeStrength = Math.pow(10, 1.5 * richterScale - 4);
+
+            const stress = strength / elasticity;
+            const strain = stress / 100; // Simpele benadering
+
+            // Beïnvloed de resultaten door de sterkte van de aardbeving
+            const adjustedStress = stress * (1 + earthquakeStrength / 100);
+            const adjustedStrain = strain * (1 + earthquakeStrength / 100);
+
+            displayResults(material, adjustedStress, adjustedStrain, strength, earthquakeStrength);
+        }
+
+        function displayResults(material, stress, strain, originalStrength, earthquakeStrength) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+        <p>Materiaal: ${material}</p>
+        <p>Spanning: ${stress.toFixed(2)} MPa</p>
+        <p>Rek: ${strain.toFixed(4)}</p>
+        <p>Oorspronkelijke sterkte: ${originalStrength.toFixed(2)} MPa</p>
+        <p>Sterkte van de aardbeving: ${earthquakeStrength.toFixed(2)}</p>
+        <p>${stress > originalStrength ? 'Het materiaal zal breken.' : 'Het materiaal zal niet breken.'}</p>
+      `;
+        }
+    </script>
+</body>
+
+</html>

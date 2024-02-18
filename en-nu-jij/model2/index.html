@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wiskunde - SIR Model - sir.vqnderklein.nl</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <link rel="shortcut icon" href="https://i.vqnderklein.nl/img/inloggen_004.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="static/css/index.css" />
+    <script src="static/js/graph.js" defer></script>
+    <script src="static/js/app.js" defer></script>
+
+</head>
+
+<div class="loaderContainerWrapper">
+        <div class="honeycomb">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div><body>
+
+    <div class="navbar">
+        <div class="navbar_flex">
+            <img src="https://i.vqnderklein.nl/img/sir_model_wiskunde_header.png" alt="" class="navbar_img" />
+            <div class="nav_links">
+                <a href="verslag/" class="nav_link">Verslag</a>
+                <a href="documentatie/" class="nav_link">Documentatie</a>
+                <a href="#uitwerkingen" class="nav_link">Uitwerkingen</a>
+                <a href="documentatie/formules/" class="nav_link">Formules</a>
+                <a class="nav_link active">Model</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="grid">
+        <div class="left">
+            <div class="text">
+                <div>
+                    <h1>HET SIR MODEL</h1>
+                    <p>
+                        Het SIR model, ofwel het S I R model, is een veel gebruikt model om virusuitbraken te volgen en te voorspellen. De afkorting SIR staat voor <b>S</b> vatbaar <b>I</b> geïnfecteerd
+                        <b>R</b> genezen. Het is dus enorm handig om te weten wat een SIR grafiek betekent, hoe het werkt en hoe je er een zelf kan maken, want niemand weet wanneer de volgende grote epandemie uitbreekt!
+                        <br /><br />
+                        <p>
+                            Op deze website is het mogelijk om zelf te gaan onderzoeken hoe het SIR model in elkaar zit, voor uitgebreide uitleg en hulp over het SIR model neem een kijkje bij de documentatie. Daar leggen we het SIR model en zijn grondslag tot in de kleine puntjes
+                            uit.<br /><br />Klaar om zelf te gaan onderzoeken hoe het SIR model in elkaar steekt? Begin dan snel met je eigen SIR model, hier beneden. Misschien wordt jij wel onze nieuwe viroloog? <br /><br
+                            /><br /><a class="link full" href="documentatie/">Documentatie</a
+                >
+                <a class="link empty">Start het SIR model</a>
+                        </p>
+                    </p>
+                </div>
+            </div>
+            <div class="settings_border">
+                <br />
+                <div class="border">
+                    <div class="side_options">
+
+                        <div class="option selected custom" onclick="SelectVirus('Custom')">
+                            Custom
+                        </div>
+                        <div class="option Custom2" onclick="SelectVirus('Custom2')">
+                            Custom2
+                        </div>
+                        <div class="option Custom3" onclick="SelectVirus('Custom3')">
+                            Custom3
+                        </div>
+                        <div class="option Custom4" onclick="SelectVirus('Custom4')">
+                            Custom4
+                        </div>
+                        <div class="option Custom5" onclick="SelectVirus('Custom5')">
+                            Custom5
+                        </div>
+
+                    </div>
+                    <br />
+                    <span id="flex">
+              <input
+                class="input"
+                min="1"
+                type="number"
+                step="1000"
+                placeholder="Grote van populatie"
+                id="pop"
+              />
+
+              <br />
+              <input
+                class="input"
+                min="0"
+                type="number"
+                step="100"
+                placeholder="Besmet aan begin van model"
+                id="I0"
+              />
+            </span>
+                    <span id="flex" style="
+                justify-content: space-between;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              ">
+              <p>Populatiegrootte</p>
+              <p>Aantal geïnfecteerden (begin)</p>
+            </span>
+                    <br />
+                    <span id="flex">
+              <input
+                class="input"
+                min="0"
+                type="number"
+                step="10"
+                placeholder="Genezen bij start model"
+                id="R0"
+              />
+            </span>
+                    <span id="flex" style="
+                justify-content: space-between;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              ">
+              <p>Genezen mensen (begin)</p>
+            </span>
+                    <br />
+                    <span id="flex">
+              <input
+                class="input"
+                type="number"
+                step="0.1"
+                step="10"
+                max="2"
+                min="0"
+                placeholder="Infectie snelheid (0 - 1)"
+                id="beta"
+              />
+              <input
+                class="input"
+                type="number"
+                step="0.1"
+                max="2"
+                min="0"
+                placeholder="Genezen snelheid (0 - 1)"
+                id="gamma"
+              />
+            </span>
+                    <span id="flex" style="
+                justify-content: space-between;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              ">
+              <p>Infecties snelheid (bèta)</p>
+              <p>Genezings snelheid (gamma)</p>
+            </span>
+                    <br />
+                    <br />
+                    <hr />
+                    <br />
+                    <h4>Maatregelen</h4>
+                    <br />
+                    <span id="flex">
+              <input
+                class="input"
+                min="0"
+                step="10"
+                type="number"
+                placeholder="Start van maatregelen"
+                id="startSocial"
+              /><input
+                placeholder="Maatregelen effectiviteit (0 - 1)"
+                type="number"
+                id="effSocial"
+                class="input"
+                step="0.1"
+                max="1"
+                min="0"
+              />
+            </span>
+                    <span id="flex" style="
+                justify-content: space-between;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              ">
+              <p>Start (dag)</p>
+              <p>Effectiviteit (0 - 1)</p>
+            </span>
+                    <br />
+                    <span id="flex">
+              <input
+                class="input"
+                min="0"
+                type="number"
+                step="10"
+                placeholder="Start van maatregelen"
+                id="startMask"
+              /><input
+                placeholder="Maatregelen effectiviteit (0 - 1)"
+                type="number"
+                id="effMask"
+                class="input"
+                step="0.1"
+                max="1"
+                min="0"
+              />
+            </span>
+                    <span id="flex" style="
+                justify-content: space-between;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              ">
+              <p>Start (dag)</p>
+              <p>Effectiviteit (0 - 1)</p>
+            </span>
+                    <br />
+                    <span id="flex">
+              <input
+                class="input"
+                min="0"
+                type="number"
+                step="10"
+                placeholder="Start van maatregelen"
+                id="startVac"
+              /><input
+                placeholder="Maatregelen effectiviteit (0 - 1)"
+                type="number"
+                id="effVac"
+                class="input"
+                step="0.1"
+                max="1"
+                min="0"
+              />
+            </span>
+                    <span id="flex" step="10" style="
+                justify-content: space-between;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                  'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              ">
+              <p>Start (dag)</p>
+              <p>Effectiviteit (0 - 1)</p>
+            </span>
+                    <br />
+                    <hr />
+                    <br />
+                    <br />
+                    <h5>DISCLAIMER</h5>
+                    <p class="dislc">
+                        Programm graphics are created with plotly libary and the programm is partly programmed by chat.openai.com and <b>vqnderklein.nl</b>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div id="plot"></div>
+            <br />
+        </div>
+    </div>
+    <div class="berekeningen" id="uitwerkingen">
+        <h2>Resultaten</h2>
+        <br />
+        <table id="input">
+            <tr>
+                <th>T</th>
+                <th>S</th>
+                <th>I</th>
+                <th>R</th>
+                <th>Bèta</th>
+                <th>Gamma</th>
+                <th>B</th>
+                <th>G</th>
+                <th>N</th>
+            </tr>
+        </table>
+    </div>
+
+    <br /><br />
+</body>
+
+</html>

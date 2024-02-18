@@ -1,0 +1,495 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.error {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 320px;
+    display: none;
+    padding: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: #EF665B;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px -3px #111;
+}
+
+.navbar,
+.navbarLeft {
+    position: absolute;
+    right: 0;
+    color: white;
+    margin: 2em;
+    margin-top: 1em;
+    display: grid;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.logo {
+    max-width: 5%;
+    left: -8%;
+    position: absolute;
+}
+
+.topNavbar {
+    position: absolute;
+    color: white;
+    margin: 1.5em;
+    width: 90%;
+    display: flex;
+    gap: 1.3em;
+    align-items: center;
+    left: 8%;
+}
+
+.topNavbar div {
+    align-items: center;
+    gap: 5px;
+}
+
+.cameraAngle div {
+    display: flex;
+}
+
+.toolsSelection {
+    display: flex;
+    gap: 1em !important;
+    position: relative;
+    padding-right: 1em;
+    border-right: 2px solid;
+}
+
+.toolsSelection::after,
+.cameraAngle::after {
+    content: 'Selector Tools';
+    position: absolute;
+    top: -23px;
+    font-size: 12px;
+    color: grey;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-family: monospace !important;
+}
+
+.cameraAngle {
+    position: relative;
+    display: flex;
+    gap: 1em !important;
+    padding-right: 1em;
+    border-right: 2px solid;
+}
+
+.cameraAngle::after {
+    content: 'Camera Hoek';
+}
+
+.ActiveHover,
+.ActiveCamera {
+    padding: 7px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.ActiveCamera {
+    color: #78909c;
+}
+
+.toolsSelection div {
+    cursor: pointer;
+}
+
+.topNavbar .text {
+    margin-top: 0;
+}
+
+.navbarLeft {
+    left: 0 !important;
+    width: 3%;
+}
+
+.navbar span {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed;
+}
+
+.active {
+    background-color: #37474f;
+    padding: 5px;
+    color: #bbdefb;
+    border-radius: 10px;
+}
+
+.main {
+    width: fit-content;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    padding-top: 1em;
+}
+
+#ClearFloor {
+    color: #f57f17;
+    cursor: pointer;
+}
+
+.text {
+    margin-top: -18px;
+    font-family: monospace;
+    color: grey;
+    font-size: 12px;
+}
+
+.buildObjects span {
+    cursor: pointer !important;
+}
+
+.floorIndication,
+.tools,
+.buildObjects {
+    position: relative;
+}
+
+.ActiveCamera .text {
+    color: #78909c;
+}
+
+.floorIndication::after,
+.tools::after,
+.buildObjects::after {
+    content: 'Etage';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    rotate: 90deg;
+    top: 40%;
+    right: -70%;
+    font-family: monospace;
+    color: grey;
+    font-weight: bold;
+}
+
+.tools::after {
+    content: 'Tools' !important;
+}
+
+.buildObjects::after {
+    content: 'Bouw elementen' !important;
+    right: -73px;
+    top: 50%;
+}
+
+.activeObject {
+    padding: 5px;
+    background-color: #43486b;
+    border-radius: 10px;
+}
+
+#Walls.activeObject+.textForObject {
+    color: white;
+}
+
+#Floors.activeObject+.textForFloor {
+    color: white;
+}
+
+#Foundations.activeObject+.textForFoundation {
+    color: white;
+}
+
+#Location.activeObject+.textForLocation {
+    color: white;
+}
+
+#Build.activeObject+.textForBuild {
+    color: white;
+}
+
+#Layout.activeObject+.textForLayout {
+    color: white;
+}
+
+.materialSelector {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    grid-template-columns: 60% 40%;
+}
+
+.materialInformationSection {
+    background-color: rgb(54, 70, 78, 0.9);
+    width: 100%;
+    position: relative;
+    padding: 0.5em;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.materialInformationSection p {
+    font-weight: normal;
+    font-size: 16px;
+    max-width: 80%;
+}
+
+.materialImageSector canvas {
+    max-height: 60% !important;
+}
+
+.materialImageSection {
+    background-color: rgb(54, 70, 78, 0.6);
+    width: 100%;
+    position: relative !important;
+}
+
+.materialImageSection .titel {
+    position: absolute;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    right: 5px;
+    color: rgb(71, 69, 69);
+}
+
+.materialSelector::after {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 15px;
+    width: 0;
+    z-index: 1;
+    right: -10px;
+    border: medium solid #263238;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #263238;
+}
+
+.material {
+    position: relative;
+}
+
+.soortenGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+    row-gap: 5px;
+}
+
+.tools span,
+.cameraAngle span {
+    cursor: pointer;
+}
+
+.ActiveHover .text,
+.ActiveHover .text {
+    color: white;
+}
+
+.ActiveSideNav {
+    display: grid !important;
+}
+
+.button_below {
+    bottom: 1em;
+    right: 1em;
+    width: 200px;
+    text-align: right;
+    float: right;
+    position: absolute;
+}
+
+.button_below p {
+    text-align: right !important;
+    max-width: 100% !important;
+}
+
+.button_below a {
+    font-size: 18px;
+    color: #bbdefb !important;
+    text-decoration: none;
+    margin-left: 15px;
+    border-bottom: 2px solid;
+    padding-bottom: 4px;
+}
+
+.button_below .button {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 4px 7px;
+}
+
+.itemGrid {
+    margin-top: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    gap: 1em;
+}
+
+.itemCard {
+    background-color: #263238;
+    padding: 8px 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid black;
+    border-radius: 5px;
+    height: min-content;
+}
+
+.itemCard:hover {
+    scale: 1.05;
+    transition: 100ms;
+}
+
+.itemTitle {
+    font-size: 20px;
+}
+
+p.itemID {
+    color: #78909c;
+    font-size: 12px;
+    padding-top: 3px;
+    font-family: monospace;
+    margin-bottom: 1em;
+}
+
+p.itemBeschrijving {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    max-width: 100%;
+    color: #ccdce9;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.itemKosten svg {
+    color: #80cbc4;
+}
+
+.itemKosten {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px !important;
+    margin-bottom: 10px;
+}
+
+.itemPoints,
+.ItemBewegelijkheid {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.itemPoints svg {
+    color: #d1c4e9;
+}
+
+.ItemBewegelijkheid svg {
+    color: #d7ccc8;
+}
+
+.selectButton {
+    margin-top: 20px;
+    color: #90caf9;
+    border: 1px solid;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    width: max-content;
+    padding: 6px 12px;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #37474f;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0c0d0e;
+    color: white;
+}
+
+.specs {
+    padding: 10px;
+    overflow: scroll;
+    height: 300px;
+}
+
+b.P {
+    color: #1de9b6;
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+b.M {
+    color: #ef9a9a;
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+b.N {
+    color: #ff1744;
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.error__icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-2px);
+    margin-right: 8px;
+}
+
+.error__icon path {
+    fill: #fff;
+}
+
+.error__title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+}
+
+.error__close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.error__close path {
+    fill: #fff;
+}

@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aardbevingsbestendig bouwen • Simulatie (Bouw Je Eigen Huis) - pws.vqnderklein.nl</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="core.js" defer></script>
+    <script src="objects.js" defer></script>
+    <script src="dev.js" defer></script>
+    <script src="createFloors.js" defer></script>
+    <script src="createPreview.js" defer></script>
+    <script src="navbarUtils.js" defer></script>
+    <script src="navbar.js" defer></script>
+    <script src="informationManager.js" defer></script>
+
+    <link rel="stylesheet" href="stylingSimulator.css">
+
+    <link rel="shortcut icon" href="../../../assets/img/svg/logo.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="topNavbar">
+
+        <button class="submitButton" onclick="apiSender()">
+           Simuleer
+        </button>
+
+        <div class="error">
+            <div class="error__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none"><path fill="#393a37" d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z"></path></svg>
+            </div>
+            <div class="error__title">lorem ipsum dolor sit amet</div>
+            <div class="error__close"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20"><path fill="#393a37" d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"></path></svg></div>
+        </div>
+    </div>
+    <div class="sideNav">
+        <div class="navLogoContainer">
+            <img src="box.svg" alt="Logo">
+            <div class="textForLogo">
+                <div class="titleNav">
+                    Simulatie
+                </div>
+                <div class="subTitle">
+                    Bouw je eigen huis
+                </div>
+            </div>
+        </div>
+        <div class="navbarHideButton Open" onclick="OpenAccordion('1')" id="A1">
+            <div class="titleSettings">
+                <div class="titleContainer">
+                    Informatie
+                </div>
+                <div class="streep"></div>
+                <div class="iconImage" id="I1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414l-5.657 5.657Z"/></g></svg>
+                </div>
+
+            </div>
+            <div class="contentInsideHideButton">
+                <div class="statusButton">
+                    <b> Camera hoek</b>
+                    <div class="SelectButton">
+
+                        <div class="cameraOption ActiveCamera" onclick="switchCameraLook('Side')" id="Side">
+                            <div class="cameraLogo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M12.95 1.5a.45.45 0 0 0-.9 0v12a.45.45 0 1 0 .9 0v-12ZM6.568 3.932a.45.45 0 1 0-.636.636L8.414 7.05H.5a.45.45 0 0 0 0 .9h7.914l-2.482 2.482a.45.45 0 1 0 .636.636l3.25-3.25a.45.45 0 0 0 0-.636l-3.25-3.25Z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div class="cameraDescr">
+                                Zijkant
+                            </div>
+                        </div>
+                        <div class="cameraOption" onclick="switchCameraLook('Top')" id="Top">
+                            <div class="cameraLogo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0-4 0"/><path d="M12 18c-3.6 0-6.6-2-9-6c2.4-4 5.4-6 9-6c3.6 0 6.6 2 9 6m-2 4v6m3-3l-3 3l-3-3"/></g></svg>                                </div>
+                            <div class="cameraDescr">
+                                Top
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusButton">
+                    <b> Verdieping</b>
+                    <div class="SelectButton">
+
+                        <div class="FloorOption " id="Foundation" onclick="mobileOptionToSelectFloor(0)">
+                            <div class="cameraLogo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><rect width="36" height="36" x="6" y="6" rx="3"/><rect width="10" height="20" x="19" y="14" rx="5"/></g></svg></svg>
+                            </div>
+                        </div>
+                        <div class="FloorOption" id="FirstFloor" onclick="mobileOptionToSelectFloor(1)">
+                            <div class="cameraLogo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><rect width="36" height="36" x="6" y="6" rx="3"/><path d="M21.226 18L26 13.017V34"/></g></svg>                                </div>
+                        </div>
+                        <div class="FloorOption " id="SecondFloor" onclick="mobileOptionToSelectFloor(2)">
+                            <div class="cameraLogo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><rect width="36" height="36" x="6" y="6" rx="3"/><path d="M19 19c0-3.167 2.667-5 5-5s5 1.833 5 5c0 5.7-10 9.933-10 15h10"/></g></svg>                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusButton">
+                    <b> Reset</b>
+
+                    <div class="SupportText" style="padding-top:4px;">
+                        <p>Het gehele model leeg maken? Deze actie kan <u>niet</u> meer ongedaan worden gemaakt!</p>
+
+                    </div>
+
+
+                    <br>
+                    <button class="deleteButton" type="button" id="ClearFloor">
+                        <span class="button__text">Reset</span>
+                        <span class="button__icon"><svg class="svg" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><title></title><path d="M112,112l20,320c.95,18.49,14.4,32,32,32H348c17.67,0,30.87-13.51,32-32l20-320" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line style="stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" x1="80" x2="432" y1="112" y2="112"></line><path d="M192,112V72h0a23.93,23.93,0,0,1,24-24h80a23.93,23.93,0,0,1,24,24h0v40" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" x1="256" x2="256" y1="176" y2="400"></line><line style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" x1="184" x2="192" y1="176" y2="400"></line><line style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" x1="328" x2="320" y1="176" y2="400"></line></svg></span>
+                      </button>
+
+                </div>
+                <div class="statusButton">
+                    <b> Support & Hulp</b>
+                    <div class="SelectButton">
+                        <div class="SupportText">
+                            <p>Vragen over hoe het model werkt? Of waar wat staat? Bekijk de documentatie en artikelen over hoe dit model werkt. Klik <a href="https://pws.vqnderklein.nl/support/modellen/bouw-je-eigen-gebouw.html" target="_blank">hier</a>                                om er naar toe te gaan.</p>
+                            <br>
+                            <p>Voor de verantwoording van het model, en hoe het tot stond is gekomen, kunt u de volgende pagina bezoeken. Klik <a href="../../../onderzoek/algemene-verantwoording/bouw-je-eigen-huis.html" target="_blank">hier</a> om er naar
+                                toe te gaan.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="navbarHideButton Closed" onclick="OpenAccordion('2')" id="A2">
+            <div class="titleSettings">
+                <div class="titleContainer">
+                    Overzicht
+                </div>
+                <div class="streep"></div>
+                <div class="iconImage" id="I2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M11.293 8.293a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-1.414 1.414L12 10.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l5.657-5.657Z"/></g></svg>
+                </div>
+
+            </div>
+            <div class="contentInsideHideButton">
+
+                <div class="overviewSubTitle" id="FloorControl0" data-state="0">
+                    Fundering
+                    <div class="NothingToShow NothingToShow0">
+                        Geen objecten gevonden!
+                    </div>
+
+                </div>
+                <div class="overviewSubTitle" id="FloorControl1" data-state="0">
+                    Eerste etage
+                    <div class="NothingToShow NothingToShow1">
+                        Geen objecten gevonden!
+                    </div>
+
+
+                </div>
+                <div class="overviewSubTitle" id="FloorControl2" data-state="0">
+                    Tweede etage
+                    <div class="NothingToShow NothingToShow2">
+                        Geen objecten gevonden!
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="navbarHideButton Closed" onclick="OpenAccordion('3')" id="A3">
+            <div class="titleSettings">
+                <div class="titleContainer">
+                    Bouwen
+                </div>
+                <div class="streep"></div>
+                <div class="iconImage" id="I3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M11.293 8.293a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-1.414 1.414L12 10.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l5.657-5.657Z"/></g></svg>
+                </div>
+
+            </div>
+            <div class="contentInsideHideButton Closed">
+                <div class="statusMessage">
+                    <p>Je bouwt op de:<br></p>
+                    <p class="TextHolder"> <b class="Text"></b></p>
+                </div>
+                <br>
+                <button type="button" class="addButton">
+                    <span class="button__text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path fill="currentColor" d="m215.6 25l-3.5 21H144v18h224V46h-68.1l-3.5-21h-80.8zm-34.4 55c2.8 3.14 5.5 6.32 8 9.6c4.7 6.29 8.7 13 10.5 20.4h112.6c1.8-7.4 5.8-14.11 10.5-20.4c2.5-3.28 5.2-6.46 8-9.6H181.2zM144 126v18h224v-18H144zm37.2 34c2.8 3.1 5.5 6.3 8 9.6c4.7 6.3 8.7 13 10.5 20.4h112.6c1.8-7.4 5.8-14.1 10.5-20.4c2.5-3.3 5.2-6.5 8-9.6H181.2zM144 206v18h224v-18H144zm37.2 34c2.8 3.1 5.5 6.3 8 9.6c4.7 6.3 8.7 13 10.5 20.4h112.6c1.8-7.4 5.8-14.1 10.5-20.4c2.5-3.3 5.2-6.5 8-9.6H181.2zM144 286v18h224v-18H144zm37.2 34c2.8 3.1 5.5 6.3 8 9.6c4.7 6.3 8.7 13 10.5 20.4h112.6c1.8-7.4 5.8-14.1 10.5-20.4c2.5-3.3 5.2-6.5 8-9.6H181.2zm19.8 48v16c0 19-8.8 39.9-21.3 60.6c-8.8 14.8-19.7 29.3-31.1 42.4h214.8c-11.4-13.1-22.3-27.6-31.1-42.4C319.8 423.9 311 403 311 384v-16H201z"/></svg>
+                        Fundering</span>
+                    <span class="button__icon" id="BuildSelectorClick" onclick="selectSideNav('Foundation')" data-target="Build"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                  </button>
+
+                <button type="button" class="addButton">
+                    <span class="button__text">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M42.5 18.032a1.194 1.194 0 0 1-.573.986l-3.13 1.963l-4.762 2.98l-9.207 5.782a1.553 1.553 0 0 1-1.655 0l-9.208-5.782l-4.762-2.98l-3.13-1.963a1.21 1.21 0 0 1 0-2.058L22.95 6.374a1.975 1.975 0 0 1 2.1 0l16.877 10.587c.392.244.583.657.573 1.07Z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M42.5 23.962v6.014a1.18 1.18 0 0 1-.573.987l-17.1 10.734a1.6 1.6 0 0 1-1.654 0l-17.1-10.735a1.18 1.18 0 0 1-.573-.986v-6.014c0 .392.191.795.573 1.028l3.13 1.963l13.97 8.762a1.553 1.553 0 0 0 1.654 0l13.97-8.762l3.13-1.963a1.2 1.2 0 0 0 .572-1.028Zm0-5.93v5.93m-37 0v-5.93"/></svg>
+                        Vloer</span>
+                    <span class="button__icon" id="FloorsSelectorClick" onclick="selectSideNav('Floor')" data-target="Floors"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                  </button>
+
+                <button type="button" class="addButton">
+                    <span class="button__text" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256"><path fill="currentColor" d="M224 48H32a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h192a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8ZM88 144v-32h80v32Zm-48 0v-32h32v32Zm144-32h32v32h-32Zm32-16h-80V64h80Zm-96-32v32H40V64Zm-80 96h80v32H40Zm96 32v-32h80v32Z"/></svg>
+                        Muur</span>
+                    <span class="button__icon" id="WallsSelectorClick" onclick="selectSideNav('Wall')" data-target="Walls"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                  </button>
+
+                <button type="button" class="addButton">
+                    <span class="button__text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="m13.783 15.172l2.121-2.121l5.996 5.996l-2.121 2.121zM17.5 10c1.93 0 3.5-1.57 3.5-3.5c0-.58-.16-1.12-.41-1.6l-2.7 2.7l-1.49-1.49l2.7-2.7c-.48-.25-1.02-.41-1.6-.41C15.57 3 14 4.57 14 6.5c0 .41.08.8.21 1.16l-1.85 1.85l-1.78-1.78l.71-.71l-1.41-1.41L12 3.49a3 3 0 0 0-4.24 0L4.22 7.03l1.41 1.41H2.81l-.71.71l3.54 3.54l.71-.71V9.15l1.41 1.41l.71-.71l1.78 1.78l-7.41 7.41l2.12 2.12L16.34 9.79c.36.13.75.21 1.16.21z"/></svg>
+                        Constructie</span>
+                    <span class="button__icon" id="FoundationsSelectorClick" onclick="selectSideNav('Build', 'Fo1')" data-target="Foundations">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                  </button>
+
+
+            </div>
+
+        </div>
+        <div class="navbarHideButton Closed" onclick="OpenAccordion('4')" id="A4">
+            <div class="titleSettings">
+                <div class="titleContainer">
+                    Instellingen
+                </div>
+                <div class="streep"></div>
+                <div class="iconImage" id="I4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M11.293 8.293a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-1.414 1.414L12 10.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l5.657-5.657Z"/></g></svg>
+                </div>
+
+            </div>
+            <div class="contentInsideHideButton ">
+                <div class="SupportText">
+                    <p>De volgende instellingen zijn belangrijk voor de berekeningen en het bepalen van de aardbevingsbestendigheid</p>
+                    <br>
+                </div>
+                <b class="titleSettingsSmall"><p> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" d="M3 .5h18m-18 23h18m-15.5 0v-6l2.856-1.714a4.415 4.415 0 0 0 0-7.572L5.5 6.5v-6m13 0v6l-2.856 1.714a4.416 4.416 0 0 0 0 7.572L18.5 17.5v6"/></svg> Aardbeving duratie</p></b>
+                <div class="PB-range-slider-div">
+                    <div class="SelectorDesc">
+                        <input type="range" min="10" max="90" value="30" oninput="updateSliderValue('range1', 'sliderValue1')" class="PB-range-slider" id="range1">
+                        <div class="rangeSelector">
+                            <p>10s</p>
+                            <p>90s</p>
+                        </div>
+                    </div>
+
+                    <p class="PB-range-slidervalue" id="sliderValue1">30s</p>
+
+                </div>
+
+                <br>
+                <b class="titleSettingsSmall"> <p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 20a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z" opacity=".5"/><path d="M6 4c0-.943 0-1.414.293-1.707C6.586 2 7.057 2 8 2h8c.943 0 1.414 0 1.707.293C18 2.586 18 3.057 18 4c0 .943 0 1.414-.293 1.707C17.414 6 16.943 6 16 6H8c-.943 0-1.414 0-1.707-.293C6 5.414 6 4.943 6 4Zm2.5 12.5A1.5 1.5 0 0 1 10 15h4a1.5 1.5 0 0 1 0 3h-4a1.5 1.5 0 0 1-1.5-1.5Z"/><path d="M14 15.5v-10m-4 10V6" opacity=".5"/><path stroke-linecap="round" d="m8 8l8 2m-8 1.5l8 2"/><path stroke-linecap="round" d="M20 11.5h2m-18 0H2m17.071 2.8l.707.7m-14.85-.7l-.706.7m14.85-6.3l.706-.7m-14.85.7L4.223 8" opacity=".5"/></g></svg> Intensiteit</p></b>
+                <div class="PB-range-slider-div">
+                    <div class="SelectorDesc">
+                        <input type="range" min="1" max="10" value="3" oninput="updateSliderValue('range2', 'sliderValue2')" class="PB-range-slider" id="range2">
+                        <div class="rangeSelector">
+                            <p>1</p>
+                            <p>10</p>
+                        </div>
+                    </div>
+                    <p class="PB-range-slidervalue" id="sliderValue2">3</p>
+                </div>
+                <br>
+                <b class="titleSettingsSmall"><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M6.25 5.5A3.25 3.25 0 1 1 9.5 8.75H3a.75.75 0 0 1 0-1.5h6.5A1.75 1.75 0 1 0 7.75 5.5v.357a.75.75 0 1 1-1.5 0z" clip-rule="evenodd"/><path fill="currentColor" d="M3.25 14a.75.75 0 0 1 .75-.75h14.5a4.25 4.25 0 1 1-4.25 4.25V17a.75.75 0 0 1 1.5 0v.5a2.75 2.75 0 1 0 2.75-2.75H4a.75.75 0 0 1-.75-.75" opacity=".4"/><path fill="currentColor" d="M14.25 7.5a4.25 4.25 0 1 1 4.25 4.25H2a.75.75 0 0 1 0-1.5h16.5a2.75 2.75 0 1 0-2.75-2.75V8a.75.75 0 0 1-1.5 0z" opacity=".7"/></svg> Omstandigheden</p></b>
+                <div class="PB-range-slider-div">
+                    <div class="SelectorDesc">
+                        <input type="range" min="1" max="10" value="5" oninput="updateSliderValue('range3', 'sliderValue3')" class="PB-range-slider" id="range3">
+                        <div class="rangeSelector">
+                            <p>1</p>
+                            <p>10</p>
+                        </div>
+                    </div>
+                    <p class="PB-range-slidervalue" id="sliderValue3">5</p>
+                </div>
+                <br>
+                <b class="titleSettingsSmall"><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8h9m4 0h3m-9 8h9M4 16h3"/><circle cx="9" cy="16" r="2"/><circle cx="15" cy="8" r="2"/></g></svg> Modus</p></b>
+                <div class="radio-inputs">
+                    <label class="radio">
+                      <input type="radio" name="radio" onclick="changeDiff(1)">
+                      <span class="name">M</span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio"  checked="" onclick="changeDiff(2)">
+                      <span class="name">N</span>
+                    </label>
+
+                    <label class="radio">
+                      <input type="radio" name="radio" onclick="changeDiff(3)">
+                      <span class="name">H</span>
+                    </label>
+                </div>
+                <br>
+                <p id="Diff">Normale moeilijkheid</p>
+                <p id="DiffEff"></p>
+                <br>
+                <button id="ResetLocalStorage" onclick="window.localStorage.removeItem('preference');window.location.href='simulatie.html'">
+                    Reset voorkeuren
+                </button>
+                <br><br>
+                <div class="SupportText">
+                    <p>Dit verwijdert je ingevulde voorkeuren (introductie poppup). Deze actie herlaadt de pagina, uw vooruitgang zal verloren gaan!</p>
+                    <br>
+                </div>
+                <div class="SupportText Footer">
+                    <p>Model versie <b>v0.8.3</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar">
+
+
+
+
+        <div class="main">
+            <!--Indication of current floor-->
+            <div class="goBack">
+                <a onclick="leave()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M9.5 10.5v2a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v2M6.5 7h7m-2-2l2 2l-2 2"/></svg>
+                </a>
+            </div>
+            <div class="floorIndication">
+                <span onclick="mobileOptionToSelectFloor(2)" id="SecondFloor2"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L2 12h3v8h14v-8h3L12 3M9 8h4a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2v-2H9V8Z"/></svg></span>
+                <span onclick="mobileOptionToSelectFloor(1)" id="FirstFloor2"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L2 12h3v8h14v-8h3L12 3m-2 5h4v10h-2v-8h-2V8Z"/></svg></span>
+                <span onclick="mobileOptionToSelectFloor(0)" id="Foundation2"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M11 10h2v6h-2zm11 2h-3v8H5v-8H2l10-9zm-7-2a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z"/></svg></span>
+            </div>
+            <br>
+            <hr>
+            <div>
+                <span id="SecondFloor12"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M16 16c0-1.105-3.134-2-7-2s-7 .895-7 2s3.134 2 7 2s7-.895 7-2ZM2 16v4.937C2 22.077 5.134 23 9 23s7-.924 7-2.063V16M9 5c-4.418 0-8 .895-8 2s3.582 2 8 2M1 7v5c0 1.013 3.582 2 8 2M23 4c0-1.105-3.1-2-6.923-2c-3.824 0-6.923.895-6.923 2s3.1 2 6.923 2S23 5.105 23 4Zm-7 12c3.824 0 7-.987 7-2V4M9.154 4v10.166M9 9c0 1.013 3.253 2 7.077 2C19.9 11 23 10.013 23 9"/></svg></span>
+                <span id="geldRemaining">35000</span>
+            </div>
+
+            <!--Different kind of build materials-->
+            <div class="buildObjects ">
+                <!-- <div class="material">
+                    <div class="materialSelector Walls ">
+                        <div class="materialInformationSection">
+                            Muren
+                            <div class="itemGrid">
+                                <div class="itemCard">
+                                    <div class="itemTitle W1">
+                                        Stenen muur
+                                    </div>
+                                    <p class="itemID W1">03fd94j</p>
+                                    <p class="itemBeschrijving W1">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten W1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints W1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid W1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Wall', 1)" data-id="W1" class="selectButton WallSelectButton Selected">Geselecteerd</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle W2">
+                                        Betonnen muur
+                                    </div>
+                                    <p class="itemID W2">03fd94j</p>
+                                    <p class="itemBeschrijving W2">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten W2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints W2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid W2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Wall', 1)" data-id="W2" class="selectButton WallSelectButton">Selecteer</p>
+                                </div>
+                                <div class="itemCard">
+                                    <div class="itemTitle W3">
+                                        Houten muur
+                                    </div>
+                                    <p class="itemID W3">03fd94j</p>
+                                    <p class="itemBeschrijving W3">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten W3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints W3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid W3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Wall', 1)" data-id="W3" class="selectButton WallSelectButton">Selecteer</p>
+                                </div>
+                                <div class="itemCard">
+                                    <div class="itemTitle W4">
+                                        Bamboe muur
+                                    </div>
+                                    <p class="itemID W4">03fd94j</p>
+                                    <p class="itemBeschrijving W4">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten W4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints W4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid W4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Wall', 1)" data-id="W4" class="selectButton WallSelectButton">Selecteer</p>
+                                </div>
+                            </div>
+                            <div class="button_below">
+
+                                <a href="#" class="button" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); checkForMode()">Cancel</a>
+                                <a href="#" onclick="applyMaterial('walls')">Apply</a>
+                            </div>
+                        </div>
+
+                        <div class="materialImageSection">
+                            <div class="titel">
+                                Voorbeeld weergave
+                            </div>
+                            <div class="materialImageSector"></div>
+                            <div class="specs specs-W"></div>
+                        </div>
+
+                    </div>
+                </div> -->
+                <div class="material">
+                    <div class="materialSelector Walls">
+                        <div class="materialInformationSection">
+                            <div class="grid">
+                                <div class="nav">
+                                    <div class="closeButton" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); document.querySelector(`.specsBox-Wall`).style.display = 'none'"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24"><path fill="currentColor" d="m8.4 16.308l3.6-3.6l3.6 3.6l.708-.708l-3.6-3.6l3.6-3.6l-.708-.708l-3.6 3.6l-3.6-3.6l-.708.708l3.6 3.6l-3.6 3.6zM12.003 21q-1.866 0-3.51-.708q-1.643-.709-2.859-1.924q-1.216-1.214-1.925-2.856Q3 13.87 3 12.003q0-1.866.708-3.51q.709-1.643 1.924-2.859q1.214-1.216 2.856-1.925Q10.13 3 11.997 3q1.866 0 3.51.708q1.643.709 2.859 1.924q1.216 1.214 1.925 2.856Q21 10.13 21 11.997q0 1.866-.708 3.51q-.709 1.643-1.924 2.859q-1.214 1.216-2.856 1.925Q13.87 21 12.003 21M12 20q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"/></svg></div>
+                                    <div class="soortenOfMaterial navGrid-W"> </div>
+                                </div>
+                                <div class="specsBox specsBox-Wall">
+                                    <div>
+                                        <div class="specs_container">
+                                            <div class="materialTitle">
+                                                <p class="title-W">
+                                                    Houten muur
+                                                </p>
+                                                <div class="descTitle id-W">
+                                                    80ll1BAH
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="content">
+                                            <div class="subSectionTitle">
+                                                Beschrijving
+                                            </div>
+                                            <p class="desc-W">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem optio mollitia blanditiis dicta doloremque officiis excepturi labore explicabo, ea porro?</p>
+
+                                        </div>
+                                        <div class="content">
+                                            <div class="subSectionTitle">
+                                                Kosten
+                                            </div>
+                                            <p class="cost-W">Per verdieping</p>
+                                        </div>
+                                        <div class="content pointsContainer">
+                                            <div class="specs specs-W"> </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="controls">
+                                                <a href="#" class="button" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); checkForMode();  document.querySelector(`.specsBox-Wall`).style.display = 'none'">Cancel</a>
+                                                <a href="#" onclick="applyMaterial('walls')">Apply</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="materialImageSection">
+                            <div class="titel">
+                                Voorbeeld weergave
+                            </div>
+                            <div class="materialImageSector"></div>
+                            <div class="specs specs-W"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <div class="material">
+                    <div class="materialSelector Floors ">
+
+                        <div class="materialInformationSection">
+                            Vloeren
+                            <div class="itemGrid">
+                                <div class="itemCard">
+                                    <div class="itemTitle F1">
+                                        Stenen muur
+                                    </div>
+                                    <p class="itemID F1">03fd94j</p>
+                                    <p class="itemBeschrijving F1">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten F1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints F1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid F1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Floor', 2)" data-id="F1" class="selectButton FloorSelectButton Selected">Geselecteerd</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle F2">
+                                        Betonnen muur
+                                    </div>
+                                    <p class="itemID F2">03fd94j</p>
+                                    <p class="itemBeschrijving F2">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten F2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints F2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid F2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Floor', 2)" data-id="F2" class="selectButton FloorSelectButton">Selecteer</p>
+                                </div>
+                                <div class="itemCard">
+                                    <div class="itemTitle F3">
+                                        Houten muur
+                                    </div>
+                                    <p class="itemID F3">03fd94j</p>
+                                    <p class="itemBeschrijving F3">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten F3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints F3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid F3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Floor', 2)" data-id="F3" class="selectButton FloorSelectButton">Selecteer</p>
+                                </div>
+                                <div class="itemCard">
+                                    <div class="itemTitle F4">
+                                        Bamboe muur
+                                    </div>
+                                    <p class="itemID F4">03fd94j</p>
+                                    <p class="itemBeschrijving F4">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten F4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints F4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid F4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Floor', 2)" data-id="F4" class="selectButton FloorSelectButton">Selecteer</p>
+                                </div>
+                            </div>
+
+                            <div class="button_below">
+
+                                <a href="#" class="button" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); checkForMode()">Cancel</a>
+                                <a href="#" onclick="applyMaterial('floors')">Apply</a>
+                            </div>
+                        </div>
+
+                        <div class="materialImageSection">
+                            <div class="titel">
+                                Voorbeeld weergave
+                            </div>
+                            <div class="materialImageSector1"></div>
+                            <div class="specs specs-F"></div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="material">
+                    <div class="materialSelector Floors">
+                        <div class="materialInformationSection">
+                            <div class="grid">
+                                <div class="nav">
+                                    <div class="closeButton" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); document.querySelector(`.specsBox-Floor`).style.display = 'none'"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24"><path fill="currentColor" d="m8.4 16.308l3.6-3.6l3.6 3.6l.708-.708l-3.6-3.6l3.6-3.6l-.708-.708l-3.6 3.6l-3.6-3.6l-.708.708l3.6 3.6l-3.6 3.6zM12.003 21q-1.866 0-3.51-.708q-1.643-.709-2.859-1.924q-1.216-1.214-1.925-2.856Q3 13.87 3 12.003q0-1.866.708-3.51q.709-1.643 1.924-2.859q1.214-1.216 2.856-1.925Q10.13 3 11.997 3q1.866 0 3.51.708q1.643.709 2.859 1.924q1.216 1.214 1.925 2.856Q21 10.13 21 11.997q0 1.866-.708 3.51q-.709 1.643-1.924 2.859q-1.214 1.216-2.856 1.925Q13.87 21 12.003 21M12 20q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"/></svg></div>
+                                    <div class="soortenOfMaterial navGrid-F"></div>
+                                </div>
+                                <div class="specsBox specsBox-Floor">
+                                    <div>
+                                        <div class="specs_container">
+                                            <div class="materialTitle">
+                                                <p class="title-F">
+                                                    Houten muur
+                                                </p>
+                                                <div class="descTitle id-F">
+                                                    80ll1BAH
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="subSectionTitle">
+                                                Beschrijving
+                                            </div>
+                                            <p class="desc-F">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem optio mollitia blanditiis dicta doloremque officiis excepturi labore explicabo, ea porro?</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="subSectionTitle">
+                                                Kosten
+                                            </div>
+                                            <p class="cost-F">Per verdieping</p>
+                                        </div>
+                                        <div class="content pointsContainer">
+                                            <div class="specs specs-F"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="controls">
+                                                <a href="#" class="button" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); checkForMode();  document.querySelector(`.specsBox-Floor`).style.display = 'none'">Cancel</a>
+                                                <a href="#" onclick="applyMaterial('floors')">Apply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="materialImageSection">
+                            <div class="titel">
+                                Voorbeeld weergave
+                            </div>
+                            <div class="materialImageSector1"></div>
+                            <div class="specs specs-F"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="material">
+                    <div class="materialSelector Foundations">
+                        <div class="materialInformationSection">
+                            <div class="grid">
+                                <div class="nav">
+                                    <div class="closeButton" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); document.querySelector(`.specsBox-Foundation`).style.display = 'none'"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24"><path fill="currentColor" d="m8.4 16.308l3.6-3.6l3.6 3.6l.708-.708l-3.6-3.6l3.6-3.6l-.708-.708l-3.6 3.6l-3.6-3.6l-.708.708l3.6 3.6l-3.6 3.6zM12.003 21q-1.866 0-3.51-.708q-1.643-.709-2.859-1.924q-1.216-1.214-1.925-2.856Q3 13.87 3 12.003q0-1.866.708-3.51q.709-1.643 1.924-2.859q1.214-1.216 2.856-1.925Q10.13 3 11.997 3q1.866 0 3.51.708q1.643.709 2.859 1.924q1.216 1.214 1.925 2.856Q21 10.13 21 11.997q0 1.866-.708 3.51q-.709 1.643-1.924 2.859q-1.214 1.216-2.856 1.925Q13.87 21 12.003 21M12 20q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"/></svg></div>
+                                    <div class="soortenOfMaterial navGrid-Fo"></div>
+                                </div>
+                                <div class="specsBox specsBox-Foundation">
+                                    <div>
+                                        <div class="specs_container">
+                                            <div class="materialTitle">
+                                                <p class="title-Fo">
+                                                    Houten muur
+                                                </p>
+                                                <div class="descTitle id-Fo">
+                                                    80ll1BAH
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="subSectionTitle">
+                                                Beschrijving
+                                            </div>
+                                            <p class="desc-Fo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem optio mollitia blanditiis dicta doloremque officiis excepturi labore explicabo, ea porro?</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="subSectionTitle">
+                                                Kosten
+                                            </div>
+                                            <p class="cost-Fo">Per verdieping</p>
+                                        </div>
+                                        <div class="content pointsContainer">
+                                            <div class="specs specs-Fo"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="controls">
+                                                <a href="#" class="button" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); checkForMode();  document.querySelector(`.specsBox-Foundation`).style.display = 'none'">Cancel</a>
+                                                <a href="#" onclick="applyMaterial('foundations')">Apply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="materialImageSection">
+                            <div class="titel">
+                                Voorbeeld weergave
+                            </div>
+                            <div class="materialImageSector2"></div>
+                            <div class="specs specs-F"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="material">
+                    <div class="materialSelector Foundations ">
+
+                        <div class="materialInformationSection">
+                            Funderingen
+                            <div class="itemGrid">
+                                <div class="itemCard">
+                                    <div class="itemTitle Fo1">
+                                        Fundering (standaard)
+                                    </div>
+                                    <p class="itemID Fo1">03fd94j</p>
+                                    <p class="itemBeschrijving Fo1">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten Fo1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints Fo1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid Fo1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Foundation', 3)" data-id="Fo1" class="selectButton FoundationSelectButton Select">Selecteer</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle Fo2">
+                                        Fundering (frame)
+                                    </div>
+                                    <p class="itemID Fo2">03fd94j</p>
+                                    <p class="itemBeschrijving Fo2">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten Fo2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints Fo2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid Fo2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Foundation', 3)" data-id="Fo2" class="selectButton FoundationSelectButton ">Selecteer</p>
+                                </div>
+                                <div class="itemCard">
+                                    <div class="itemTitle Fo3">
+                                        Fundering s1
+                                    </div>
+                                    <p class="itemID Fo3">03fd94j</p>
+                                    <p class="itemBeschrijving Fo3">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten Fo3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints Fo3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid Fo3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Foundation', 3)" data-id="Fo3" class="selectButton FoundationSelectButton">Selecteer</p>
+                                </div>
+                                <div class="itemCard">
+                                    <div class="itemTitle Fo4">
+                                        Fundering s2
+                                    </div>
+                                    <p class="itemID Fo4">03fd94j</p>
+                                    <p class="itemBeschrijving Fo4">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten Fo4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints Fo4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid Fo4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Foundation', 3)" data-id="Fo4" class="selectButton FoundationSelectButton">Selecteer</p>
+                                </div>
+                            </div>
+
+                            <div class="button_below">
+
+                                <a href="#" class="button" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); checkForMode()">Cancel</a>
+                                <a href="#" onclick="applyMaterial('foundations')">Apply</a>
+                            </div>
+                        </div>
+
+                        <div class="materialImageSection">
+                            <div class="titel">
+                                Voorbeeld weergave
+                            </div>
+                            <div class="materialImageSector2"></div>
+                            <div class="specs specs-Fo">
+
+
+                                <table id="customers">
+                                    <tr>
+                                        <th>Soort</th>
+                                        <th>Specificatie</th>
+                                        <th>Punten</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Constructie</td>
+                                        <td>Stevigheid</td>
+                                        <td><b class="P">+</b>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Duurzaamheid</td>
+                                        <td>Houdbaarheidsduur<br> Vervoer
+                                        </td>
+                                        <td><b class="M">~</b>10<br>
+                                            <b class="M">~</b>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Belasting millieu</td>
+                                        <td>Uitstoot CO<sub>2</sub></td>
+                                        <td><b class="N">-</b>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Draaglast</td>
+                                        <td>Roland Mendel</td>
+                                        <td>Austria</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intensiteit</td>
+                                        <td>Onderhoud</td>
+                                        <td><b class="N">-</b>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Duurzaamheid</td>
+                                        <td></td>
+                                        <td>UK</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="material">
+                    <div class="materialSelector Builds">
+                        <div class="materialInformationSection">
+                            <div class="grid">
+                                <div class="nav">
+                                    <div class="closeButton" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); document.querySelector(`.specsBox-Structure`).style.display = 'none'"><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24"><path fill="currentColor" d="m8.4 16.308l3.6-3.6l3.6 3.6l.708-.708l-3.6-3.6l3.6-3.6l-.708-.708l-3.6 3.6l-3.6-3.6l-.708.708l3.6 3.6l-3.6 3.6zM12.003 21q-1.866 0-3.51-.708q-1.643-.709-2.859-1.924q-1.216-1.214-1.925-2.856Q3 13.87 3 12.003q0-1.866.708-3.51q.709-1.643 1.924-2.859q1.214-1.216 2.856-1.925Q10.13 3 11.997 3q1.866 0 3.51.708q1.643.709 2.859 1.924q1.216 1.214 1.925 2.856Q21 10.13 21 11.997q0 1.866-.708 3.51q-.709 1.643-1.924 2.859q-1.214 1.216-2.856 1.925Q13.87 21 12.003 21M12 20q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"/></svg></div>
+                                    <div class="soortenOfMaterial navGrid-S"> </div>
+                                </div>
+                                <div class="specsBox specsBox-Structure">
+                                    <div>
+                                        <div class="specs_container">
+                                            <div class="materialTitle">
+                                                <p class="title-S">
+                                                    Houten muur
+                                                </p>
+                                                <div class="descTitle id-S">
+                                                    80ll1BAH
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="content">
+                                            <div class="subSectionTitle">
+                                                Beschrijving
+                                            </div>
+                                            <p class="desc-S">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem optio mollitia blanditiis dicta doloremque officiis excepturi labore explicabo, ea porro?</p>
+
+                                        </div>
+                                        <div class="content">
+                                            <div class="subSectionTitle">
+                                                Kosten
+                                            </div>
+                                            <p class="cost-S">Per verdieping</p>
+                                        </div>
+                                        <div class="content pointsContainer">
+                                            <div class="specs specs-S"> </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="controls">
+                                                <a href="#" class="button" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); checkForMode();  document.querySelector(`.specsBox-Structure`).style.display = 'none'">Cancel</a>
+                                                <a href="#" onclick="applyMaterial('structure')">Apply</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="materialImageSection">
+                            <div class="titel">
+                                Voorbeeld weergave
+                            </div>
+                            <div class="materialImageSector3"></div>
+                            <div class="specs specs-W"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <div class="material">
+                    <div class="materialSelector Builds ">
+
+                        <div class="materialInformationSection">
+                            Constructie typen
+                            <div class="itemGrid">
+                                <div class="itemCard">
+                                    <div class="itemTitle B1">
+                                        Houtbouw
+                                    </div>
+                                    <p class="itemID B1">03fd94j</p>
+                                    <p class="itemBeschrijving B1">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten B1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints B1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid B1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Structure', 4)" data-id="S1" class="selectButton StructureSelectButton Selected">Geselecteerd</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle B2">
+                                        Betonbouw
+                                    </div>
+                                    <p class="itemID B2">03fd94j</p>
+                                    <p class="itemBeschrijving B2">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten B2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints B2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid B2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Structure', 4)" data-id="S2" class="selectButton StructureSelectButton ">Selecteer</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle B3">
+                                        Bamboebouw
+                                    </div>
+                                    <p class="itemID B3">03fd94j</p>
+                                    <p class="itemBeschrijving B3">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten B3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints B3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid B3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Structure', 4)" data-id="S3" class="selectButton StructureSelectButton ">Selecteer</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle B4">
+                                        Metaalbouw
+                                    </div>
+                                    <p class="itemID B4">03fd94j</p>
+                                    <p class="itemBeschrijving B4">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten B4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints B4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid B4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Structure', 4)" data-id="S4" class="selectButton StructureSelectButton ">Selecteer</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle B5">
+                                        Metaalbouw (versterkt)
+                                    </div>
+                                    <p class="itemID B5">03fd94j</p>
+                                    <p class="itemBeschrijving B5">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten B5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints B5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid B5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Structure', 4)" data-id="S5" class="selectButton StructureSelectButton ">Selecteer</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle B6">
+                                        Houtbouw (versterkt)
+                                    </div>
+                                    <p class="itemID B6">03fd94j</p>
+                                    <p class="itemBeschrijving B6">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten B6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints B6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid B6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Structure', 4)" data-id="S6" class="selectButton StructureSelectButton ">Selecteer</p>
+                                </div>
+
+                                <div class="itemCard">
+                                    <div class="itemTitle B7">
+                                        Bamboebouw (versterkt)
+                                    </div>
+                                    <p class="itemID B7">03fd94j</p>
+                                    <p class="itemBeschrijving B7">Een muur van steen, gemaakt met zorgvuldig geplaatste stenen zorgt voor stevigheid en een goede basis voor uw gebouw. </p>
+                                    <p class="itemKosten B7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7ZM10.5 16a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0Z"/><path fill="currentColor" d="M17.526 5.116L14.347.659L2.658 9.997L2.01 9.99V10H1.5v12h21V10h-.962l-1.914-5.599l-2.098.715ZM19.425 10H9.397l7.469-2.546l1.522-.487L19.425 10ZM15.55 5.79L7.84 8.418l6.106-4.878l1.604 2.25ZM3.5 18.169v-4.34A3.008 3.008 0 0 0 5.33 12h13.34a3.009 3.009 0 0 0 1.83 1.83v4.34A3.009 3.009 0 0 0 18.67 20H5.332A3.01 3.01 0 0 0 3.5 18.169Z"/></svg>                                        </p>
+                                    <p class="itemPoints B7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 18h-2v-3a1 1 0 0 0-1-1h-5v-2.71l1.13.59a1 1 0 0 0 1.45-1.05l-.4-2.37l1.72-1.69a1 1 0 0 0 .26-1a1 1 0 0 0-.81-.68L14 4.72l-1.1-2.16a1 1 0 0 0-1.8 0L10 4.72l-2.39.35a1 1 0 0 0-.81.68a1 1 0 0 0 .26 1l1.76 1.71l-.4 2.37a1 1 0 0 0 1.45 1.05l1.13-.59V14H6a1 1 0 0 0-1 1v3H3a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1H7v-2h10v2h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1h4v1a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1Zm-9-9.37a1 1 0 0 0-.47.12l-.8.42l.15-.9a1 1 0 0 0-.29-.88l-.65-.64l.9-.13a1 1 0 0 0 .76-.54l.4-.82l.4.82a1 1 0 0 0 .76.54l.9.13l-.65.64a1 1 0 0 0-.29.88l.15.9l-.8-.42a1 1 0 0 0-.47-.12Z"/></svg>
+
+                                    </p>
+                                    <p class="ItemBewegelijkheid B7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M40.17 38.17a21.5 21.5 0 0 0 0-28.37m-32.34.03a21.5 21.5 0 0 0 0 28.34M15.3 17.3a11 11 0 0 0 0 13.4m17.4 0a11 11 0 0 0 0-13.4"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.63 13.63a16.15 16.15 0 0 0 0 20.74m24.74 0a16.15 16.15 0 0 0 0-20.74"/></svg>                                        </p>
+                                    <p id="Select" onclick="selectorFunction(this.getAttribute('data-id'), 'Structure', 4)" data-id="S7" class="selectButton StructureSelectButton ">Selecteer</p>
+                                </div>
+
+
+                            </div>
+
+                            <div class="button_below">
+
+                                <a href="#" class="button" onclick="document.querySelector('.ActiveSideNav').classList.remove('ActiveSideNav'); checkForMode()">Cancel</a>
+                                <a href="#" onclick="applyMaterial('structure')">Apply</a>
+                            </div>
+                        </div>
+
+                        <div class="materialImageSection">
+                            <div class="titel">
+                                Voorbeeld weergave
+                            </div>
+                            <div class="materialImageSector3"></div>
+                            <div class="specs specs-S">
+                                <table id="customers">
+                                    <tr>
+                                        <th>Soort</th>
+                                        <th>Specificatie</th>
+                                        <th>Punten</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Constructie</td>
+                                        <td>Stevigheid</td>
+                                        <td><b class="P">+</b>100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Duurzaamheid</td>
+                                        <td>Houdbaarheidsduur<br> Vervoer
+                                        </td>
+                                        <td><b class="M">~</b>10<br>
+                                            <b class="M">~</b>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Belasting millieu</td>
+                                        <td>Uitstoot CO<sub>2</sub></td>
+                                        <td><b class="N">-</b>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Draaglast</td>
+                                        <td>Roland Mendel</td>
+                                        <td>Austria</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intensiteit</td>
+                                        <td>Onderhoud</td>
+                                        <td><b class="N">-</b>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Duurzaamheid</td>
+                                        <td></td>
+                                        <td>UK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Duurzaamheid</td>
+                                        <td></td>
+                                        <td>UK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Duurzaamheid</td>
+                                        <td></td>
+                                        <td>UK</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="materialSelectorDash">
+        <div class="navbarMaterials">
+            <div class="NavTitle">
+                <b>Material</b>Selector
+            </div>
+            <div class="subSectionsBuildUI">
+                <a href="" class="activeSubSection">Muren</a>
+                <a href="">Vloeren</a>
+                <a href="">Funderingen</a>
+                <a href="">Constructies</a>
+            </div>
+        </div>
+        <div class="gridContainer">
+            <div class="gridUI">
+
+                <div class="options">
+
+                    <div class="searchBar">
+                        1
+                    </div>
+
+                </div>
+
+                <div class="preview_information">
+
+                    <div class="previewContainer">
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html

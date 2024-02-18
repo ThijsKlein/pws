@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aardbevingsbestendig bouwen • Support & Helpcenter - pws.vqnderklein.nl</title>
+
+    <link rel="stylesheet" href="../assets/css/main.index.css">
+
+    <script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/contactApp.js" defer></script>
+
+    <link rel="shortcut icon" href="../assets/img/svg/logo.svg" type="image/x-icon">
+</head>
+
+<div class="loaderContainerWrapper">
+    <div class="honeycomb">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<body>
+
+    <div class="navbar_container">
+        <div class="navbar">
+            <div class="navbar_logo">
+                <a href="../"><img src="../assets/img/svg/logo.svg" alt=""></a>
+                <div>
+                    <div class="navbarTitle">PWS</div>
+                    <div class="navbarDesc">Aardbevingsbestendig bouwen</div>
+                </div>
+            </div>
+            <div class="navbar_links">
+                <a href="../">Home</a>
+                <a href="../onderzoek.html">Onderzoek</a>
+                <a href="../artikel/artikelen.html">Artikelen</a>
+                <a href="../helpcentrum/start.html">Support</a>
+                <a href="../en-nu-jij.html">Interactie</a>
+                <a href="../contact/kom-in-contact-met-ons.html" class="ActiveLink">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="headerHeroContainer supportKind">
+        <div class="supportPageHero contactWrapperHero">
+            <div class="mainHeroImage ">
+                <img src="../assets/img/contactHeroImage.jpg" alt="Hero image">
+            </div>
+
+            <div class="quickNav">
+                <h1>Start het gesprek</h1>
+                <p>U kunt ons direct bereiken via support@pws.vqnderklein.nl, of doormiddel van het invullen van het formulier hier beneden. Als u contact met ons opneemt aanvaardt u, onze omgang met uw informatie. U kunt onze privacy en disclaimer verklaring
+                    <a href="../helpcentrum/overige-onderwerpen/disclaimer-en-privacy-statement.html" onclick="createContactForm(1)" target="_blank">hier</a> lezen.</p>
+                <div class="emailWrapper">
+                    <form id="uploadForm" enctype="multipart/form-data">
+
+
+                        <div class="PersonalInformation">
+                            <div class="input">
+                                <b>Naam</b>
+                                <input required type="text" name="" id="formName">
+                            </div>
+                            <div class="input">
+                                <b>Achternaam</b>
+                                <input required type="text" name="" id="formSurname">
+                            </div>
+                            <div class="input">
+                                <b>Emailadress</b>
+                                <input required type="email" name="" id="formEmail">
+                            </div>
+                            <div class="input" style="margin-bottom: 0em;">
+                                <b>Onderwerp</b>
+                                <input required type="text" name="" id="formSubject">
+                            </div>
+
+                        </div>
+                        <div class="TextContent">
+                            <textarea required name="" id="textContent" cols="30" rows="10"></textarea>
+                        </div>
+                        <div></div>
+                        <div class="container">
+                            <br>
+                            <input type="file" id="fileInput" multiple>
+                            <br><br>
+                            <div class="loaderHolder"></div>
+                            <a class="MobileUpload" onclick="uploadFiles()">Upload</a>
+                            <div id="fileList">
+
+                            </div>
+                        </div>
+                        <div class="sendWrapper">
+                            <div class="buttonCheck"><span>Ik accepteer de <a target="_blank" href="../../helpcentrum/overige-onderwerpen/disclaimer-en-privacy-statement.html">voorwaarden</a></span>
+                                <label class="container">
+                                    <input type="checkbox" onclick="acceptTerms();" name="terms">
+                                    <svg viewBox="0 0 64 64" height="1em" width="1em">
+                                      <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                                    </svg>
+                                  </label>
+                            </div>
+
+                            <button id="Submitter">Verstuur</button>
+                        </div>
+
+                        <div class="statusMail">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="contactFooter ">
+        <div class="contactFooterFlexbox ">
+            <div class="navbar_logo ">
+                <img src="../assets/img/svg/logo.svg " alt=" ">
+                <div>
+                    <div class="navbarTitle ">PWS</div>
+                    <div class="navbarDesc ">Aardbevingsbestendig bouwen</div>
+                </div>
+            </div>
+            <div class="text_link ">
+                <div class="textTitle ">
+                    Iets niet kunnen vinden, vragen of opmerkingen? Neem een kijkje op onze contact pagina's<br>
+                </div>
+                <div class="buttonFlexbox ">
+                    <div class="buttonProceed ">
+                        <a class="proceedReadingButton " href="contact/kom-in-contact-met-ons.html ">Contact pagina</a>
+                    </div>
+                    <div class="buttonProceed ">
+                        <a class="proceedReadingButton " href="helpcentrum/start.html ">Helpcentrum</a>
+                    </div>
+                    <div class="buttonProceed ">
+                        <a class="proceedReadingButton " href="mailto:support@pws.vqnderklein.nl ">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer "></div>
+    <div class="footer_container "></div>
+    <div class="footer_wrapper ">
+
+        <div class="footerLinks ">
+            <div class="footerGrid ">
+                <div class="linkContainer ">
+
+                    <div class="linkSectionHead ">
+                        Onderzoek
+                    </div>
+                    <br>
+                    <div class="linkSectionLinks ">
+                        <a href="onderzoek/algemene-inleiding.html ">Inleiding</a>
+                        <a href="onderzoek/algemene-samenvatting.html ">Samenvatting</a>
+                        <a href="onderzoek/onderzoeksmethode.html ">Onderzoeksmethode</a>
+                        <a href="onderzoek/resultaten.html ">Resultaten</a>
+                        <a href="onderzoek/algemene-conclusie.html ">Conclusie</a>
+                        <a href="onderzoek/algemene-discussie.html ">Discussie</a>
+                        <a href="helpcentrum/algemene-verantwoording.html ">Verantwoording</a>
+                        <a href="helpcentrum/algemene-bronnen-en-literatuur-lijst.html ">Literatuurlijst</a>
+                    </div>
+                </div>
+                <div class="linkContainer ">
+
+                    <div class="linkSectionHead ">
+                        Artikelen
+                    </div>
+                    <br>
+                    <div class="linkSectionLinks ">
+                        <a href="artikel/wat-zijn-aardbevingen.html ">Wat zijn aardbevingen?</a>
+                        <a href="artikel/wat-zijn-de-gevolgen-van-aardbevingen-op-een-stad.html ">Effecten aardbevingen</a>
+                        <a href="artikel/wat-zijn-de-maatregelen-tegen-aardbevingsschade.html ">Bescherming huizen?</a>
+                        <a href="artikel/hoe-beschermen-we-duurzaam-gebouwen-tegen-aardbevingsschade.html ">Duuurzame bescherming</a>
+                        <a href="artikel/hoe-duurzaam-zijn-de-mogelijkheden-om-huizen-beschermen.html ">Realistische oplossingen</a>
+                    </div>
+                </div>
+                <div class="linkContainer ">
+
+                    <div class="linkSectionHead ">
+                        Interactie
+                    </div>
+                    <br>
+                    <div class="linkSectionLinks ">
+                        <a href="en-nu-jij/praktisch-onderzoek.html ">Praktisch onderzoek</a>
+                        <a href="en-nu-jij/start.html ">Modellen</a>
+                        <a href="en-nu-jij/vraagstukken.html ">Vraagstukken</a>
+                        <a href="en-nu-jij/animaties.html ">Animaties</a>
+                        <a href="en-nu-jij/videos.html ">Video's</a>
+                        <a href="en-nu-jij/documenten.html ">Documenten</a>
+                        <a href="en-nu-jij/practica.html ">Practica</a>
+                    </div>
+                </div>
+                <div class="linkContainer ">
+
+                    <div class="linkSectionHead ">
+                        Overig
+                    </div>
+                    <br>
+                    <div class="linkSectionLinks ">
+                        <a href=" ">Home</a>
+                        <a href=" ">Helpcentrum</a>
+                        <a href=" ">Contact</a>
+                        <a href=" ">Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="copyRight ">
+        <span><b>PWS</b> 2023 - 2024</span>
+        <p>© Copyright by <a href="https://vqnderklein.nl " target="_blank ">vqnderklein.nl</a>.<br> <span>
+            All rights reserved.
+        </span></p>
+    </div>
+    </div>
+
+</body>
+
+</html>

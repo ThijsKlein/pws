@@ -1,0 +1,308 @@
+{
+    "api": {
+        "version": "v0.4",
+        "api-description": "API used for retrieving specific details about the objects, needed fur further calculations",
+        "api-mode": "public",
+        "api-developer": "vqnderklein.nl",
+        "api-last-update": "23-01-2024"
+    },
+    "materials": {
+        "W1": [{
+            "id": "b0mP7tZ6",
+            "name": "Bakstenen muur",
+            "material": "Normaal",
+            "description": "Een imposante muurconstructie van beton, biedt niet alleen structurele kracht maar ook een hedendaagse visuele impact.",
+            "attributes": {
+                "cost": "4500",
+                "structurePoints": "6",
+                "movementPoints": "4"
+            }
+        }],
+        "W2": [{
+            "id": "tAfq4nVf",
+            "name": "Betonnen muur",
+            "material": "Stevig",
+            "description": "Wanden met karakter, vervaardigd uit duurzaam bamboemateriaal, voegen warmte en een natuurlijke uitstraling toe aan elke ruimte.",
+            "attributes": {
+                "cost": "6000",
+                "structurePoints": "8",
+                "movementPoints": "2"
+            }
+        }],
+        "W3": [{
+            "id": "3AmDQvxr",
+            "name": "Houten muur",
+            "material": "Duurzaam",
+            "description": "Een rustieke muurconstructie van houten panelen, die een natuurlijk en gezellig element toevoegt aan het interieur.",
+            "attributes": {
+                "cost": "5000",
+                "structurePoints": "5",
+                "movementPoints": "7"
+            }
+        }],
+        "W4": [{
+            "id": "6mELh7ch",
+            "name": "Bamboe muur",
+            "material": "Duurzaam",
+            "description": "Een tijdloze muur van baksteen of natuursteen, die zowel duurzaamheid als een klassieke uitstraling biedt.",
+            "attributes": {
+                "cost": "4800",
+                "structurePoints": "5",
+                "movementPoints": "8"
+            }
+        }],
+        "W5": [{
+            "id": "mOR5qE7s",
+            "name": "Lemen muur",
+            "material": "Duurzaam",
+            "description": "Een rustieke muurconstructie van houten panelen, die een natuurlijk en gezellig element toevoegt aan het interieur.",
+            "attributes": {
+                "cost": "5000",
+                "structurePoints": "5",
+                "movementPoints": "7"
+            }
+        }],
+        "W6": [{
+            "id": "K3eGfTbQ",
+            "name": "Diverse muur",
+            "material": "Recycled",
+            "description": "Een tijdloze muur van baksteen of natuursteen, die zowel duurzaamheid als een klassieke uitstraling biedt.",
+            "attributes": {
+                "cost": "4800",
+                "structurePoints": "5",
+                "movementPoints": "8"
+            }
+        }],
+        "F1": [{
+            "id": "Bl6JS4nO",
+            "name": "Houten vloer",
+            "material": "Duurzaam",
+            "description": "Een duurzame vloerconstructie met stenen materialen zoals tegels of natuursteen, die zowel functioneel als esthetisch aantrekkelijk is.",
+            "attributes": {
+                "cost": "1250",
+                "structurePoints": "6",
+                "movementPoints": "4"
+            }
+        }],
+        "F2": [{
+            "id": "n1hvLY4X",
+            "name": "Stenen vloer",
+            "material": "Normaal",
+            "description": "Een krachtige vloerconstructie van gegoten beton, die duurzaamheid, stabiliteit en een moderne industriële esthetiek combineert.",
+            "attributes": {
+                "cost": "1300",
+                "structurePoints": "8",
+                "movementPoints": "2"
+            }
+        }],
+        "F3": [{
+            "id": "v6cV3Dd9            ",
+            "name": "Bamboe vloer",
+            "material": "Duurzaam",
+            "description": "Een warme, natuurlijke vloer gemaakt van houten planken of laminaat, die comfort en tijdloze schoonheid toevoegt aan de ruimte.",
+            "attributes": {
+                "cost": "1000",
+                "structurePoints": "5",
+                "movementPoints": "7"
+            }
+        }],
+        "F4": [{
+            "id": "AtUwY4rI            ",
+            "name": "Glazen vloer",
+            "material": "Comfort",
+            "description": "Een milieuvriendelijke vloer van duurzaam bamboemateriaal, bekend om zijn flexibiliteit, eigentijdse uitstraling en eco-bewust ontwerp.",
+            "attributes": {
+                "cost": "1700",
+                "structurePoints": "5",
+                "movementPoints": "8"
+            }
+        }],
+        "F5": [{
+            "id": "ntqyV5LI",
+            "name": "Stalen vloer",
+            "material": "Stevig",
+            "description": "Een duurzame vloerconstructie met stenen materialen zoals tegels of natuursteen, die zowel functioneel als esthetisch aantrekkelijk is.",
+            "attributes": {
+                "cost": "1250",
+                "structurePoints": "6",
+                "movementPoints": "4"
+            }
+        }],
+        "F6": [{
+            "id": "SzRrg8yP",
+            "name": "Betonnen vloer",
+            "material": "Stevig",
+            "description": "Een krachtige vloerconstructie van gegoten beton, die duurzaamheid, stabiliteit en een moderne industriële esthetiek combineert.",
+            "attributes": {
+                "cost": "1300",
+                "structurePoints": "8",
+                "movementPoints": "2"
+            }
+        }],
+        "F7": [{
+            "id": "V6Bkr5vg",
+            "name": "Lemen vloer",
+            "material": "Duurzaam",
+            "description": "Een warme, natuurlijke vloer gemaakt van houten planken of laminaat, die comfort en tijdloze schoonheid toevoegt aan de ruimte.",
+            "attributes": {
+                "cost": "1000",
+                "structurePoints": "5",
+                "movementPoints": "7"
+            }
+        }],
+        "F8": [{
+            "id": "W7g85Uq2",
+            "name": "Diverse vloer",
+            "material": "Recycled",
+            "description": "Een milieuvriendelijke vloer van duurzaam bamboemateriaal, bekend om zijn flexibiliteit, eigentijdse uitstraling en eco-bewust ontwerp.",
+            "attributes": {
+                "cost": "1700",
+                "structurePoints": "5",
+                "movementPoints": "8"
+            }
+        }],
+        "Fo1": [{
+            "id": "OD2UQPpp",
+            "name": "Heipalen",
+            "material": "Hout",
+            "description": "Diep in de grond geheide, robuuste houten palen die de kern vormen van een stevige fundering, essentieel voor stabiliteit.",
+            "attributes": {
+                "cost": "18000",
+                "structurePoints": "5",
+                "movementPoints": "8"
+            }
+        }],
+        "Fo2": [{
+            "id": "yVPa5zhu",
+            "name": "Heipalen",
+            "material": "Beton",
+            "description": "Diepgaande, krachtige betonnen heipalen die de fundamenten leggen voor een duurzame en stabiele constructie.",
+            "attributes": {
+                "cost": "19000",
+                "structurePoints": "8",
+                "movementPoints": "3"
+            }
+        }],
+        "Fo3": [{
+            "id": "tpzDT6df",
+            "name": "Schuif fundering",
+            "material": "Stevig",
+            "description": "Een solide schuifplaat, zorgvuldig geplaatst tussen heipaal en fundering, die naadloze overgangen mogelijk maakt.",
+            "attributes": {
+                "cost": "33000",
+                "structurePoints": "2",
+                "movementPoints": "2"
+            }
+        }],
+        "Fo4": [{
+            "id": "80ll1BAH",
+            "name": "Demp fundering",
+            "material": "Stevig",
+            "description": " Een dempend element tussen heipaal en fundering, ontworpen om trillingen te verminderen en structurele integriteit te waarborgen.",
+            "attributes": {
+                "cost": "24000",
+                "structurePoints": "7",
+                "movementPoints": "2"
+            }
+        }],
+        "Fo5": [{
+            "id": "Pxr8ntwR",
+            "name": "Heipalen (versterkt)",
+            "material": "Beton",
+            "description": "Diepgaande, krachtige betonnen heipalen die de fundamenten leggen voor een duurzame en stabiele constructie.",
+            "attributes": {
+                "cost": "19000",
+                "structurePoints": "8",
+                "movementPoints": "3"
+            }
+        }],
+        "Fo6": [{
+            "id": "Hw9j5QFc",
+            "name": "Heipalen (versterkt)",
+            "material": "Hout",
+            "description": "Diep in de grond geheide, robuuste houten palen die de kern vormen van een stevige fundering, essentieel voor stabiliteit.",
+            "attributes": {
+                "cost": "18000",
+                "structurePoints": "5",
+                "movementPoints": "8"
+            }
+        }],
+        "S1": [{
+            "id": "ttWPJ92k",
+            "name": "Houtbouw",
+            "material": "Duurzaam",
+            "description": "Innovatieve constructie met een skelet van houten balken en stijlen, bevordert flexibiliteit, energie-efficiëntie en snelle bouwprocessen.",
+            "attributes": {
+                "cost": "8800",
+                "structurePoints": "6",
+                "movementPoints": "3"
+            }
+        }],
+        "S2": [{
+            "id": "6hd6Kmpo",
+            "name": "Betonbouw",
+            "material": "Stevig",
+            "description": "Een veelzijdige bouwmethode met solide betonnen structuren, geschikt voor diverse toepassingen en architectonische ontwerpen.",
+            "attributes": {
+                "cost": "7200",
+                "structurePoints": "8",
+                "movementPoints": "3"
+            }
+        }],
+        "S3": [{
+            "id": "vYj40yqg",
+            "name": "Bamboebouw",
+            "material": "Duurzaam",
+            "description": "Moderne bouwmethode met een metalen skelet, gericht op duurzaamheid, strakke architectuur en constructieve stabiliteit.",
+            "attributes": {
+                "cost": "6000",
+                "structurePoints": "4",
+                "movementPoints": "7"
+            }
+        }],
+        "S4": [{
+            "id": "MjqS5N8G",
+            "name": "Metaalbouw",
+            "material": "Stevig",
+            "description": "Ecovriendelijke bouwmethode met bamboe als hoofdmateriaal, wat resulteert in een natuurlijke en unieke architectonische uitstraling.",
+            "attributes": {
+                "cost": "12000",
+                "structurePoints": "4",
+                "movementPoints": "4"
+            }
+        }],
+        "S5": [{
+            "id": "OFKkP8ce",
+            "name": "Metaalbouw",
+            "material": "Versterkt",
+            "description": "Een krachtige metaalskeletconstructie met toegevoegde massa voor extra stabiliteit en structurele integriteit.",
+            "attributes": {
+                "cost": "15000",
+                "structurePoints": "7",
+                "movementPoints": "2"
+            }
+        }],
+        "S6": [{
+            "id": "PfJlR1ld",
+            "name": "Houtbouw ",
+            "material": "Versterkt",
+            "description": "Een robuuste houtskeletconstructie met extra massa voor een stevige, duurzame bouw met verminderde flexibiliteit.",
+            "attributes": {
+                "cost": "13000",
+                "structurePoints": "5",
+                "movementPoints": "8"
+            }
+        }],
+        "S7": [{
+            "id": "qEgY5R9N",
+            "name": "Bamboebouw",
+            "material": "Versterkt",
+            "description": "Een bamboeconstructie met verhoogde massa voor een solide bouw met minder flexibiliteit, waarbij robuustheid voorop staat.",
+            "attributes": {
+                "cost": "9500",
+                "structurePoints": "5",
+                "movementPoints": "8"
+            }
+        }]
+    }
+}

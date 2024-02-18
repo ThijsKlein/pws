@@ -1,0 +1,171 @@
+{
+    "api": {
+        "version": "v0.1.3.4",
+        "api-description": "API used for retrieving specific details about the objects, needed fur further calculations",
+        "api-mode": "public",
+        "api-developer": "vqnderklein.nl",
+        "api-last-update": "8-12-2023"
+    },
+    "description": {
+        "wall": "Beschrijving over een muur",
+        "floor": "Beschrijving over een vloer",
+        "foundations": "Beschrijving over een fundering",
+        "structure": "Beschrijving over een constructie"
+    },
+    "materials": {
+        "W1": [{
+            "id": "b0mP7tZ6",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "W2": [{
+            "id": "tAfq4nVf",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "W3": [{
+            "id": "3AmDQvxr",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "W4": [{
+            "id": "6mELh7ch",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "F1": [{
+            "id": "n1hvLY4X",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "F2": [{
+            "id": "SzRrg8yP",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "F3": [{
+            "id": "Bl6JS4nO",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "F4": [{
+            "id": "v6cV3Dd9",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "Fo1": [{
+            "id": "OD2UQPpp",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "Fo2": [{
+            "id": "yVPa5zhu",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "Fo3": [{
+            "id": "tpzDT6df",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "Fo4": [{
+            "id": "80ll1BAH",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "S1": [{
+            "id": "ttWPJ92k",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }],
+        "S2": [{
+            "id": "6hd6Kmpo",
+            "name": "Name1",
+            "material": "Material1",
+            "description": "Description for Material1",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "Description for Material1"
+            }
+        }]
+    }
+}

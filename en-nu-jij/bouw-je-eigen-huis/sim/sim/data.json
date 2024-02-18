@@ -1,0 +1,226 @@
+{
+    "api": {
+        "version": "v0.1.4.2",
+        "api-description": "API used for retrieving specific details about the objects, needed fur further calculations",
+        "api-mode": "public",
+        "api-developer": "vqnderklein.nl",
+        "api-last-update": "18-12-2023"
+    },
+    "description": {
+        "wall": "Beschrijving over een muur",
+        "floor": "Beschrijving over een vloer",
+        "foundations": "Beschrijving over een fundering",
+        "structure": "Beschrijving over een constructie"
+    },
+    "materials": {
+        "W1": [{
+            "id": "b0mP7tZ6",
+            "name": "Bakstenen muur",
+            "material": "Baksteen",
+            "description": "Een imposante muurconstructie van beton, biedt niet alleen structurele kracht maar ook een hedendaagse visuele impact.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "W2": [{
+            "id": "tAfq4nVf",
+            "name": "Betonnen muur",
+            "material": "Beton",
+            "description": "Wanden met karakter, vervaardigd uit duurzaam bamboemateriaal, voegen warmte en een natuurlijke uitstraling toe aan elke ruimte.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "W3": [{
+            "id": "3AmDQvxr",
+            "name": "Houten muur",
+            "material": "Hout",
+            "description": "Een rustieke muurconstructie van houten panelen, die een natuurlijk en gezellig element toevoegt aan het interieur.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "W4": [{
+            "id": "6mELh7ch",
+            "name": "Bamboe muur",
+            "material": "Bamboe",
+            "description": "Een tijdloze muur van baksteen of natuursteen, die zowel duurzaamheid als een klassieke uitstraling biedt.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "F1": [{
+            "id": "n1hvLY4X",
+            "name": "Steen vloer",
+            "material": "Steen",
+            "description": "Een duurzame vloerconstructie met stenen materialen zoals tegels of natuursteen, die zowel functioneel als esthetisch aantrekkelijk is.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "F2": [{
+            "id": "SzRrg8yP",
+            "name": "Betonnen vloer",
+            "material": "Beton",
+            "description": "Een krachtige vloerconstructie van gegoten beton, die duurzaamheid, stabiliteit en een moderne industriële esthetiek combineert.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "F3": [{
+            "id": "Bl6JS4nO",
+            "name": "Houten vloer",
+            "material": "Hout",
+            "description": "Een warme, natuurlijke vloer gemaakt van houten planken of laminaat, die comfort en tijdloze schoonheid toevoegt aan de ruimte.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "F4": [{
+            "id": "v6cV3Dd9",
+            "name": "Bamboe vloer",
+            "material": "Bamboe",
+            "description": "Een milieuvriendelijke vloer van duurzaam bamboemateriaal, bekend om zijn flexibiliteit, eigentijdse uitstraling en eco-bewust ontwerp.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "Fo1": [{
+            "id": "OD2UQPpp",
+            "name": "Heipalen",
+            "material": "Hout",
+            "description": "Diep in de grond geheide, robuuste houten palen die de kern vormen van een stevige fundering, essentieel voor stabiliteit.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "Fo2": [{
+            "id": "yVPa5zhu",
+            "name": "Heipalen",
+            "material": "Beton",
+            "description": "Diepgaande, krachtige betonnen heipalen die de fundamenten leggen voor een duurzame en stabiele constructie.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "Fo3": [{
+            "id": "tpzDT6df",
+            "name": "Schuif fundering",
+            "material": "Staal",
+            "description": "Een solide schuifplaat, zorgvuldig geplaatst tussen heipaal en fundering, die naadloze overgangen mogelijk maakt.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "Fo4": [{
+            "id": "80ll1BAH",
+            "name": "Demp fundering",
+            "material": "Rubber",
+            "description": " Een dempend element tussen heipaal en fundering, ontworpen om trillingen te verminderen en structurele integriteit te waarborgen.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "S1": [{
+            "id": "ttWPJ92k",
+            "name": "Houtbouw",
+            "material": "Hout",
+            "description": "Innovatieve constructie met een skelet van houten balken en stijlen, bevordert flexibiliteit, energie-efficiëntie en snelle bouwprocessen.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "S2": [{
+            "id": "6hd6Kmpo",
+            "name": "Betonbouw",
+            "material": "Beton",
+            "description": "Een veelzijdige bouwmethode met solide betonnen structuren, geschikt voor diverse toepassingen en architectonische ontwerpen.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "S3": [{
+            "id": "vYj40yqg",
+            "name": "Bamboebouw",
+            "material": "Bamboe",
+            "description": "Moderne bouwmethode met een metalen skelet, gericht op duurzaamheid, strakke architectuur en constructieve stabiliteit.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "S4": [{
+            "id": "MjqS5N8G",
+            "name": "Metaalbouw",
+            "material": "Metaal",
+            "description": "Ecovriendelijke bouwmethode met bamboe als hoofdmateriaal, wat resulteert in een natuurlijke en unieke architectonische uitstraling.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "S5": [{
+            "id": "OFKkP8ce",
+            "name": "Metaalbouw (versterkt)",
+            "material": "Metaal",
+            "description": "en krachtige metaalskeletconstructie met toegevoegde massa voor extra stabiliteit en structurele integriteit.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "S6": [{
+            "id": "PfJlR1ld",
+            "name": "Houtbouw (versterkt)",
+            "material": "Hout",
+            "description": "Een robuuste houtskeletconstructie met extra massa voor een stevige, duurzame bouw met verminderde flexibiliteit.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }],
+        "S7": [{
+            "id": "qEgY5R9N",
+            "name": "Bamboebouw (versterkt)",
+            "material": "Bamboe",
+            "description": "Een bamboeconstructie met verhoogde massa voor een solide bouw met minder flexibiliteit, waarbij robuustheid voorop staat.",
+            "attributes": {
+                "cost": "20.00,-",
+                "structurePoints": "20",
+                "movementPoints": "40"
+            }
+        }]
+    }
+}

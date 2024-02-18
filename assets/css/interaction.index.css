@@ -1,0 +1,474 @@
+.interactionBody {
+    padding: 1em;
+    border: 1px solid rgb(56, 55, 55);
+    border-radius: 15px;
+    background-color: #1f2325;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pageWrapper {
+    max-width: 30%;
+}
+
+.countImage {
+    position: absolute;
+    color: #a2a4a5;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 12px;
+    padding-top: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#b {
+    color: rgb(201, 201, 201);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#e {
+    color: #717172;
+}
+
+.topInteractionNav {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+    align-items: center;
+    padding-bottom: 1em;
+    font-weight: bold;
+}
+
+.skipContainer {
+    font-size: 17px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    color: #5f6062;
+    cursor: pointer;
+}
+
+.statusBarContainer {
+    max-width: 90%;
+    left: 5%;
+    position: relative;
+}
+
+.innerBar {
+    position: absolute;
+    width: calc((100% / 5) * 2);
+    height: 100%;
+    background-color: #00bfa5;
+    bottom: 0;
+    left: 0;
+    transition: 500ms width;
+    border-radius: 10px;
+}
+
+.statusbar {
+    padding: 4px;
+    position: relative;
+    background-color: rgb(60, 61, 63);
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.informationBar {
+    font-family: monospace;
+    color: #909294;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1.5em;
+}
+
+#max {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: #909294;
+    font-size: 14px;
+}
+
+#current {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.QuestionsTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a2a4a5;
+    margin-bottom: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.Awnser {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 9px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #909294;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.QuizName {
+    font-size: 32px;
+    color: #929498;
+}
+
+.Awnser:hover {
+    color: #ffffff;
+}
+
+.version {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #5f6062;
+    font-weight: bold;
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.goodAwnser {
+    background-color: #80cbc4;
+    border: 2px solid green;
+    color: black;
+    left: 4%;
+    position: relative;
+    color: #004d40;
+}
+
+.wrongAwnser {
+    background-color: #ef9a9a;
+    border: 2px solid #b71c1c;
+    color: black;
+    max-width: 100%;
+    left: 4%;
+    color: #d50000;
+    position: relative;
+}
+
+.goodAwnser .wrong {
+    display: block;
+}
+
+.goodAwnser .normal {
+    display: none;
+}
+
+.wrongAwnser .good {
+    display: block;
+}
+
+.wrongAwnser .normal {
+    display: none;
+}
+
+.good,
+.wrong {
+    display: none;
+}
+
+.goodAwnser:hover {
+    color: #004d40;
+}
+
+.wrongAwnser:hover {
+    color: #d50000 !important;
+}
+
+.QuestionAwnserWrapper {
+    max-width: 80%;
+    left: 10%;
+    gap: 15px;
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.awnser {
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+}
+
+.interactionDescription {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 80%;
+    left: 10%;
+    font-size: 15px;
+    line-height: 1.5;
+    position: relative;
+    margin-bottom: 2em;
+    color: #5f6062;
+}
+
+.interactionTag .tag {
+    color: black;
+    left: 5%;
+    margin-top: -0.8em;
+    margin-bottom: 1.5em;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.ButtonStart {
+    padding: 6px 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 2em;
+    left: 10%;
+    position: relative;
+    border: 1px solid;
+    transition: 500ms;
+    cursor: pointer;
+    background-color: #2c2c2e;
+    width: max-content;
+    border-radius: 10px;
+    color: #909294;
+}
+
+.ButtonStart:hover {
+    color: #e2e5eb;
+}
+
+.questionResult {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.questionTag {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.questionContainer {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.interactionDescription b {
+    font-size: 18px !important;
+}
+
+.questionResult .Good {
+    color: #00bfa5;
+}
+
+.questionResult .Wrong {
+    color: #be4848;
+}
+
+.questionResult .Skipped {
+    color: #737377;
+}
+
+.score {
+    color: #86888a;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+.score b {
+    color: #d7dadd;
+    text-align: center;
+}
+
+.articlePollContainer {
+    width: 30%;
+    margin-top: 1em;
+    border: 1px solid;
+    padding: 1em;
+}
+
+.loader {
+    display: block;
+    --height-of-loader: 4px;
+    --loader-color: #0071e2;
+    width: 130px;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+    ;
+}
+
+@keyframes moving {
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+        right: 0;
+        left: unset;
+    }
+}
+
+.pollContainer {
+    width: 100%;
+    max-width: 350px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 15px;
+    border: 1px solid #707070;
+    overflow: hidden;
+}
+
+.profile img {
+    max-height: 30px;
+    border-radius: 50%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    font-family: novatica;
+    color: #818181;
+    font-weight: normal;
+}
+
+.pollHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #484949;
+}
+
+.pollContainer {
+    background-color: #0d0d0e;
+}
+
+.pollTitle {
+    padding-top: 10px;
+    font-size: 25px;
+    font-family: novatica;
+    font-weight: bold;
+    color: #c2c4c5;
+}
+
+.version {
+    font-family: monospace;
+}
+
+.pollOptions {
+    margin-top: 2em;
+    display: grid;
+}
+
+.pollOption {
+    margin-bottom: 20px;
+    transition: 500ms;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    color: #a8a8a8;
+    gap: 15px;
+}
+
+.pollOptionsItem {
+    background-color: rgb(29, 29, 29, 40%);
+    border-radius: 0px 10px 10px 0px;
+    padding: 12px 18px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #c4c4c4;
+    cursor: pointer;
+    padding-right: 5em;
+    border: 1px solid #3a3a3a;
+    border-left: 3px solid #3a3a3a;
+    width: max-content;
+    position: relative;
+}
+
+.pollOption:hover {
+    scale: 1.03;
+    padding-right: 5.4em;
+}
+
+.percentage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(99, 103, 107, 0.4);
+    border-radius: 0px;
+    animation: smooth 800ms ease-in-out forwards;
+    /* Initialize the CSS variable */
+}
+
+@keyframes smooth {
+    0% {
+        width: 0;
+    }
+    to {
+        width: var(--animation-width);
+    }
+}
+
+.pollID {
+    font-family: monospace;
+    color: #797979;
+}
+
+.bottomHeader {
+    border-top: 1px solid #484949;
+    padding-top: 14px;
+    display: flex;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deelnemers {
+    display: flex;
+    align-items: center;
+    font-family: monospace !important;
+    color: #a2a4a5;
+    gap: 3px;
+}
+
+.bad {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ef9a9a;
+    padding: 5px 10px;
+    position: relative;
+    border-left: 3px solid rgb(233, 113, 113);
+    margin-bottom: 2em;
+}

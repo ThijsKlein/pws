@@ -1,0 +1,936 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="144" viewBox="0 0 456 144">
+  <g id="Group_6" data-name="Group 6" transform="translate(-37 -110)">
+    <g id="Group_5" data-name="Group 5">
+      <text id="B" transform="translate(39 115)" font-size="5" font-family="Novatica-Bold, Novatica" font-weight="700"><tspan x="0" y="0">B</tspan></text>
+      <g id="Rectangle_45" data-name="Rectangle 45" transform="translate(40 125)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="17" height="8" rx="4" stroke="none"/>
+        <rect x="0.5" y="0.5" width="16" height="7" rx="3.5" fill="none"/>
+      </g>
+      <g id="Rectangle_46" data-name="Rectangle 46" transform="translate(40 158)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="17" height="8" rx="4" stroke="none"/>
+        <rect x="0.5" y="0.5" width="16" height="7" rx="3.5" fill="none"/>
+      </g>
+      <g id="Rectangle_47" data-name="Rectangle 47" transform="translate(57 129)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="43" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="42" fill="none"/>
+      </g>
+      <g id="Rectangle_48" data-name="Rectangle 48" transform="translate(56 161)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="44" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="43" fill="none"/>
+      </g>
+      <rect id="Rectangle_49" data-name="Rectangle 49" width="13" height="3" transform="translate(66 127)" fill="#fff"/>
+      <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(65 128)" fill="#fff" stroke="#000" stroke-width="1">
+        <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+        <circle cx="1.5" cy="1.5" r="1" fill="none"/>
+      </g>
+      <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(77 128)" fill="#fff" stroke="#000" stroke-width="1">
+        <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+        <circle cx="1.5" cy="1.5" r="1" fill="none"/>
+      </g>
+      <line id="Line_7" data-name="Line 7" y1="4.5" x2="8" transform="translate(67.5 124.5)" fill="none" stroke="#000" stroke-width="1"/>
+      <line id="Line_9" data-name="Line 9" y1="32.5" transform="translate(86.5 129.5)" fill="none" stroke="#000" stroke-width="1"/>
+      <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(79 137)" fill="#fff" stroke="#000" stroke-width="1">
+        <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+        <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+      </g>
+      <line id="Line_10" data-name="Line 10" x2="10" y2="9" transform="translate(81.5 139.5)" fill="none" stroke="#000" stroke-width="1"/>
+      <line id="Line_11" data-name="Line 11" y1="10" x2="10" transform="translate(81.5 139.5)" fill="none" stroke="#000" stroke-width="1"/>
+      <text id="_230_VAC" data-name="230 VAC" transform="translate(37 147)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">230 VAC</tspan></text>
+      <text id="S1" transform="translate(65 122)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">S1</tspan></text>
+      <text id="L1" transform="translate(73 155)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">L1</tspan></text>
+      <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(95 129)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+        <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+      </g>
+      <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(95 135)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+        <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+      </g>
+      <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(95 141)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="4" rx="4.5" ry="4" stroke="none"/>
+        <ellipse cx="4.5" cy="4" rx="4" ry="3.5" fill="none"/>
+      </g>
+      <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(95 148)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="4" rx="4.5" ry="4" stroke="none"/>
+        <ellipse cx="4.5" cy="4" rx="4" ry="3.5" fill="none"/>
+      </g>
+      <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(95 155)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+        <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+      </g>
+      <rect id="Rectangle_52" data-name="Rectangle 52" width="6" height="31" transform="translate(94 130)" fill="#fff"/>
+      <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(110 129)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+        <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+      </g>
+      <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(95 129)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+        <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+      </g>
+      <g id="Rectangle_53" data-name="Rectangle 53" transform="translate(114 129)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="52" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="51" fill="none"/>
+      </g>
+      <rect id="Rectangle_54" data-name="Rectangle 54" width="6" height="31" transform="translate(94 130)" fill="#fff"/>
+      <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(110 135)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+        <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+      </g>
+      <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(110 148)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+        <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+      </g>
+      <g id="Ellipse_14" data-name="Ellipse 14" transform="matrix(1, 0.017, -0.017, 1, 110.062, 140.922)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.75" rx="4.5" ry="3.75" stroke="none"/>
+        <ellipse cx="4.5" cy="3.75" rx="4" ry="3.25" fill="none"/>
+      </g>
+      <g id="Ellipse_15" data-name="Ellipse 15" transform="translate(110 155)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+        <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+      </g>
+      <g id="Rectangle_56" data-name="Rectangle 56" transform="translate(114 161)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="23" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="22" fill="none"/>
+      </g>
+      <rect id="Rectangle_55" data-name="Rectangle 55" width="6" height="31" transform="translate(115 130)" fill="#fff"/>
+      <text id="T1" transform="translate(107 127)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">T1</tspan></text>
+      <g id="Rectangle_57" data-name="Rectangle 57" transform="translate(136 162)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="44" stroke="none"/>
+        <rect x="0.5" y="0.5" height="43" fill="none"/>
+      </g>
+      <g id="Rectangle_58" data-name="Rectangle 58" transform="translate(128 175)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="77" stroke="none"/>
+        <rect x="0.5" y="0.5" height="76" fill="none"/>
+      </g>
+      <g id="Rectangle_59" data-name="Rectangle 59" transform="translate(129 251)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="353" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="352" fill="none"/>
+      </g>
+      <g id="Rectangle_60" data-name="Rectangle 60" transform="translate(129 175)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="5" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="4" fill="none"/>
+      </g>
+      <g id="Rectangle_61" data-name="Rectangle 61" transform="translate(128 175)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="23" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="22" fill="none"/>
+      </g>
+      <g id="Ellipse_16" data-name="Ellipse 16" transform="translate(133 173)" fill="#fff" stroke="#000" stroke-width="1">
+        <ellipse cx="3.5" cy="3" rx="3.5" ry="3" stroke="none"/>
+        <ellipse cx="3.5" cy="3" rx="3" ry="2.5" fill="none"/>
+      </g>
+      <rect id="Rectangle_62" data-name="Rectangle 62" width="9" height="3" transform="translate(132 176)" fill="#fff"/>
+      <g id="Rectangle_63" data-name="Rectangle 63" transform="translate(136 176)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="3" stroke="none"/>
+        <rect x="0.5" y="0.5" height="2" fill="none"/>
+      </g>
+      <rect id="Rectangle_64" data-name="Rectangle 64" width="4" height="1" transform="translate(135 172)" fill="#fff"/>
+      <g id="Rectangle_65" data-name="Rectangle 65" transform="translate(166 154.287) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="30" height="30" stroke="none"/>
+        <rect x="0.5" y="0.5" width="29" height="29" fill="none"/>
+      </g>
+      <g id="Group_1" data-name="Group 1" transform="translate(-30)">
+        <g id="Polygon_1" data-name="Polygon 1" transform="translate(186.657 158.615) rotate(45)">
+          <path d="M 7.190985202789307 7.5 L 0.8090149760246277 7.5 L 4 1.118029952049255 L 7.190985202789307 7.5 Z" stroke="none"/>
+          <path d="M 4 2.236070156097412 L 1.618034839630127 7 L 6.381965160369873 7 L 4 2.236070156097412 M 4 0 L 8 8 L 0 8 L 4 0 Z" stroke="none" fill="#000"/>
+        </g>
+        <g id="Rectangle_66" data-name="Rectangle 66" transform="translate(186.525 158.318) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+          <rect width="8" height="1" stroke="none"/>
+          <rect x="0.5" y="0.5" width="7" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_2" data-name="Group 2" transform="translate(-9 20.385)">
+        <g id="Polygon_1-2" data-name="Polygon 1" transform="translate(186.657 158.615) rotate(45)">
+          <path d="M 7.190985202789307 7.5 L 0.8090149760246277 7.5 L 4 1.118029952049255 L 7.190985202789307 7.5 Z" stroke="none"/>
+          <path d="M 4 2.236070156097412 L 1.618034839630127 7 L 6.381965160369873 7 L 4 2.236070156097412 M 4 0 L 8 8 L 0 8 L 4 0 Z" stroke="none" fill="#000"/>
+        </g>
+        <g id="Rectangle_66-2" data-name="Rectangle 66" transform="translate(186.525 158.318) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+          <rect width="8" height="1" stroke="none"/>
+          <rect x="0.5" y="0.5" width="7" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_3" data-name="Group 3" transform="translate(339.781 -21.385) rotate(90)">
+        <g id="Polygon_1-3" data-name="Polygon 1" transform="translate(186.657 158.615) rotate(45)">
+          <path d="M 7.190985202789307 7.5 L 0.8090149760246277 7.5 L 4 1.118029952049255 L 7.190985202789307 7.5 Z" stroke="none"/>
+          <path d="M 4 2.236070156097412 L 1.618034839630127 7 L 6.381965160369873 7 L 4 2.236070156097412 M 4 0 L 8 8 L 0 8 L 4 0 Z" stroke="none" fill="#000"/>
+        </g>
+        <g id="Rectangle_66-3" data-name="Rectangle 66" transform="translate(186.525 158.318) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+          <rect width="8" height="1" stroke="none"/>
+          <rect x="0.5" y="0.5" width="7" fill="none"/>
+        </g>
+      </g>
+      <g id="Group_4" data-name="Group 4" transform="translate(318.781 -2) rotate(90)">
+        <g id="Polygon_1-4" data-name="Polygon 1" transform="translate(186.657 158.615) rotate(45)">
+          <path d="M 7.190985202789307 7.5 L 0.8090149760246277 7.5 L 4 1.118029952049255 L 7.190985202789307 7.5 Z" stroke="none"/>
+          <path d="M 4 2.236070156097412 L 1.618034839630127 7 L 6.381965160369873 7 L 4 2.236070156097412 M 4 0 L 8 8 L 0 8 L 4 0 Z" stroke="none" fill="#000"/>
+        </g>
+        <g id="Rectangle_66-4" data-name="Rectangle 66" transform="translate(186.525 158.318) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+          <rect width="8" height="1" stroke="none"/>
+          <rect x="0.5" y="0.5" width="7" fill="none"/>
+        </g>
+      </g>
+      <g id="Rectangle_67" data-name="Rectangle 67" transform="translate(136 205)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="30" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="29" fill="none"/>
+      </g>
+      <g id="Rectangle_68" data-name="Rectangle 68" transform="translate(165.5 196)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="10" stroke="none"/>
+        <rect x="0.5" y="0.5" height="9" fill="none"/>
+      </g>
+      <g id="Rectangle_69" data-name="Rectangle 69" transform="translate(202 175)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="20" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="19" fill="none"/>
+      </g>
+      <g id="Rectangle_70" data-name="Rectangle 70" transform="translate(129 126)" fill="#e3e3e3" stroke="#000" stroke-width="1">
+        <rect width="17" height="8" rx="4" stroke="none"/>
+        <rect x="0.5" y="0.5" width="16" height="7" rx="3.5" fill="none"/>
+      </g>
+      <text id="F1" transform="translate(145 125)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">F1</tspan></text>
+      <g id="Rectangle_71" data-name="Rectangle 71" transform="translate(165.5 129)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="26" stroke="none"/>
+        <rect x="0.5" y="0.5" height="25" fill="none"/>
+      </g>
+      <g id="Rectangle_72" data-name="Rectangle 72" transform="translate(201.5 130)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="45.5" stroke="none"/>
+        <rect x="0.5" y="0.5" height="44.5" fill="none"/>
+      </g>
+      <g id="Rectangle_73" data-name="Rectangle 73" transform="translate(201.5 175)" fill="#fff" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_74" data-name="Rectangle 74" transform="translate(222 173)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="14" height="5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="13" height="4" fill="none"/>
+      </g>
+      <g id="Rectangle_75" data-name="Rectangle 75" transform="translate(202 130)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="43" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="42" fill="none"/>
+      </g>
+      <g id="Rectangle_76" data-name="Rectangle 76" transform="translate(236 175)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="37" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="36" fill="none"/>
+      </g>
+      <g id="Rectangle_77" data-name="Rectangle 77" transform="translate(256 137)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="38" stroke="none"/>
+        <rect x="0.5" y="0.5" height="37" fill="none"/>
+      </g>
+      <g id="Rectangle_78" data-name="Rectangle 78" transform="translate(252 137)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="9" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="8" fill="none"/>
+      </g>
+      <line id="Line_12" data-name="Line 12" x2="8" y2="7" transform="translate(252.5 137.5) rotate(180)" fill="none" stroke="#000" stroke-width="1"/>
+      <line id="Line_13" data-name="Line 13" x1="7" y2="7" transform="translate(260.5 130.5)" fill="none" stroke="#000" stroke-width="1"/>
+      <g id="Rectangle_79" data-name="Rectangle 79" transform="translate(267 130)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="68" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="67" fill="none"/>
+      </g>
+      <g id="Path_1" data-name="Path 1" transform="translate(251.676 135.149) rotate(140)">
+        <path d="M 0.5770277380943298 2.303824901580811 L 1.328896880149841 0.9478760361671448 L 1.932976603507996 2.231887340545654 L 0.5770277380943298 2.303824901580811 Z" stroke="none"/>
+        <path d="M 1.365405559539795 -0.1490421295166016 L 2.701915502548218 2.691797971725464 L -0.2980844974517822 2.850957870483398 L 1.365405559539795 -0.1490421295166016 Z" stroke="none" fill="#000"/>
+      </g>
+      <g id="Rectangle_66-5" data-name="Rectangle 66" transform="translate(252.838 134.869) rotate(135)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="4.428" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="3.428" fill="none"/>
+      </g>
+      <g id="Rectangle_80" data-name="Rectangle 80" transform="translate(256 175)" fill="#fff" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_81" data-name="Rectangle 81" transform="translate(272 168)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="42" height="15" stroke="none"/>
+        <rect x="0.5" y="0.5" width="41" height="14" fill="none"/>
+      </g>
+      <text id="IN" transform="translate(274 177.5)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">IN</tspan></text>
+      <text id="UIT_" data-name="UIT
+" transform="translate(302 177.5)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">UIT</tspan><tspan x="0" y="6"></tspan></text>
+      <text id="GND_" data-name="GND
+
+" transform="translate(291 172.5) rotate(90)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">GND</tspan><tspan x="0" y="5"></tspan><tspan x="0" y="10"></tspan></text>
+      <g id="Rectangle_82" data-name="Rectangle 82" transform="translate(314 175)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="168" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="167" fill="none"/>
+      </g>
+      <g id="Rectangle_83" data-name="Rectangle 83" transform="translate(334 130)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="46" stroke="none"/>
+        <rect x="0.5" y="0.5" height="45" fill="none"/>
+      </g>
+      <g id="Rectangle_85" data-name="Rectangle 85" transform="translate(292 183)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="69" stroke="none"/>
+        <rect x="0.5" y="0.5" height="68" fill="none"/>
+      </g>
+      <g id="Rectangle_86" data-name="Rectangle 86" transform="translate(201.5 176)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="75" stroke="none"/>
+        <rect x="0.5" y="0.5" height="74" fill="none"/>
+      </g>
+      <g id="Rectangle_88" data-name="Rectangle 88" transform="translate(197 208)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="10" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="9" fill="none"/>
+      </g>
+      <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(197 209.9)" fill="#fff" stroke="#000" stroke-width="1">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4.5" fill="none"/>
+      </g>
+      <rect id="Rectangle_89" data-name="Rectangle 89" width="12" height="1" transform="translate(196 209)" fill="#fff"/>
+      <rect id="Rectangle_90" data-name="Rectangle 90" width="12" height="8" transform="translate(196 212)" fill="#fff"/>
+      <g id="Rectangle_91" data-name="Rectangle 91" transform="translate(201.5 210)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="10" stroke="none"/>
+        <rect x="0.5" y="0.5" height="9" fill="none"/>
+      </g>
+      <text id="C1" transform="translate(207 206)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">C1</tspan></text>
+      <g id="Rectangle_92" data-name="Rectangle 92" transform="translate(256 176)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="75" stroke="none"/>
+        <rect x="0.5" y="0.5" height="74" fill="none"/>
+      </g>
+      <g id="Rectangle_93" data-name="Rectangle 93" transform="translate(251.5 208)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="10" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="9" fill="none"/>
+      </g>
+      <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(251.5 209.9)" fill="#fff" stroke="#000" stroke-width="1">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4.5" fill="none"/>
+      </g>
+      <rect id="Rectangle_94" data-name="Rectangle 94" width="12" height="1" transform="translate(250.5 209)" fill="#fff"/>
+      <rect id="Rectangle_95" data-name="Rectangle 95" width="12" height="8" transform="translate(250.5 212)" fill="#fff"/>
+      <g id="Rectangle_96" data-name="Rectangle 96" transform="translate(256 210)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="10" stroke="none"/>
+        <rect x="0.5" y="0.5" height="9" fill="none"/>
+      </g>
+      <text id="C2_" data-name="C2
+" transform="translate(261.5 206)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">C2</tspan><tspan x="0" y="5"></tspan></text>
+      <g id="Rectangle_97" data-name="Rectangle 97" transform="translate(353.5 175)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="76" stroke="none"/>
+        <rect x="0.5" y="0.5" height="75" fill="none"/>
+      </g>
+      <g id="Rectangle_98" data-name="Rectangle 98" transform="translate(349 207)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="10" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="9" fill="none"/>
+      </g>
+      <g id="Ellipse_19" data-name="Ellipse 19" transform="translate(349 208.9)" fill="#fff" stroke="#000" stroke-width="1">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4.5" fill="none"/>
+      </g>
+      <rect id="Rectangle_99" data-name="Rectangle 99" width="12" height="1" transform="translate(348 208)" fill="#fff"/>
+      <rect id="Rectangle_100" data-name="Rectangle 100" width="12" height="8" transform="translate(348 211)" fill="#fff"/>
+      <g id="Rectangle_101" data-name="Rectangle 101" transform="translate(353.5 209)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="10" stroke="none"/>
+        <rect x="0.5" y="0.5" height="9" fill="none"/>
+      </g>
+      <text id="C3_" data-name="C3
+" transform="translate(359 205)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">C3</tspan><tspan x="0" y="5"></tspan></text>
+      <g id="Rectangle_102" data-name="Rectangle 102" transform="translate(334 176)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" height="33" fill="none"/>
+      </g>
+      <g id="Rectangle_103" data-name="Rectangle 103" transform="translate(296 210)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="39" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="38" fill="none"/>
+      </g>
+      <g id="Rectangle_104" data-name="Rectangle 104" transform="translate(292 196)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="43" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="42" fill="none"/>
+      </g>
+      <g id="Rectangle_105" data-name="Rectangle 105" transform="translate(292 196)" fill="#fff" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_106" data-name="Rectangle 106" transform="translate(334 196)" fill="#fff" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_107" data-name="Rectangle 107" transform="translate(334 175)" fill="#fff" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_108" data-name="Rectangle 108" transform="translate(353.5 175)" fill="#fff" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_109" data-name="Rectangle 109" transform="translate(290 204)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="5" height="14" stroke="none"/>
+        <rect x="0.5" y="0.5" width="4" height="13" fill="none"/>
+      </g>
+      <g id="Polygon_2" data-name="Polygon 2" transform="translate(295 213.5) rotate(-90)">
+        <path d="M 4.792900085449219 2.5 L 1.207100033760071 2.5 L 3 0.707099974155426 L 4.792900085449219 2.5 Z" stroke="none"/>
+        <path d="M 3 1.414219975471497 L 2.414220094680786 2 L 3.585779905319214 2 L 3 1.414219975471497 M 3 0 L 6 3 L 0 3 L 3 0 Z" stroke="none" fill="#000"/>
+      </g>
+      <g id="Rectangle_110" data-name="Rectangle 110" transform="translate(332 179)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="5" height="14" stroke="none"/>
+        <rect x="0.5" y="0.5" width="4" height="13" fill="none"/>
+      </g>
+      <text id="W1" transform="translate(297 205)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">W1</tspan></text>
+      <text id="W2" transform="translate(340 182)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">W2</tspan></text>
+      <g id="Rectangle_111" data-name="Rectangle 111" transform="translate(201.5 251)" fill="red" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_112" data-name="Rectangle 112" transform="translate(292 251)" fill="red" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_113" data-name="Rectangle 113" transform="translate(353.5 251)" fill="red" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_114" data-name="Rectangle 114" transform="translate(393 251)" fill="red" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_115" data-name="Rectangle 115" transform="translate(393 176)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="75" stroke="none"/>
+        <rect x="0.5" y="0.5" height="74" fill="none"/>
+      </g>
+      <g id="Rectangle_116" data-name="Rectangle 116" transform="translate(373 184)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="65" height="37" rx="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="64" height="36" rx="5.5" fill="none"/>
+      </g>
+      <g id="Rectangle_117" data-name="Rectangle 117" transform="translate(438 191)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="14" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="13" fill="none"/>
+      </g>
+      <g id="Rectangle_118" data-name="Rectangle 118" transform="translate(438 210)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="14" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="13" fill="none"/>
+      </g>
+      <g id="Rectangle_119" data-name="Rectangle 119" transform="translate(452 191)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="6" stroke="none"/>
+        <rect x="0.5" y="0.5" height="5" fill="none"/>
+      </g>
+      <g id="Rectangle_120" data-name="Rectangle 120" transform="translate(448 196)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="9" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="8" fill="none"/>
+      </g>
+      <g id="Rectangle_121" data-name="Rectangle 121" transform="translate(452 199)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_122" data-name="Rectangle 122" transform="translate(450 199)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="5" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="4" fill="none"/>
+      </g>
+      <g id="Rectangle_123" data-name="Rectangle 123" transform="translate(452 200)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="11" stroke="none"/>
+        <rect x="0.5" y="0.5" height="10" fill="none"/>
+      </g>
+      <g id="Rectangle_124" data-name="Rectangle 124" transform="translate(450 200)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="5" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="4" fill="none"/>
+      </g>
+      <text id="_" data-name="+" transform="translate(457 195)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">+</tspan></text>
+      <text id="_-" data-name="-" transform="translate(447 203)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">-</tspan></text>
+      <text id="_9V" data-name="9V" transform="translate(455 205)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">9V</tspan></text>
+      <g id="Rectangle_125" data-name="Rectangle 125" transform="translate(256 251)" fill="red" stroke="red" stroke-width="1">
+        <rect width="1" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" fill="none"/>
+      </g>
+      <g id="Rectangle_126" data-name="Rectangle 126" transform="translate(402 221)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="26" stroke="none"/>
+        <rect x="0.5" y="0.5" height="25" fill="none"/>
+      </g>
+      <g id="Rectangle_131" data-name="Rectangle 131" transform="translate(412 221)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="26" stroke="none"/>
+        <rect x="0.5" y="0.5" height="25" fill="none"/>
+      </g>
+      <g id="Rectangle_134" data-name="Rectangle 134" transform="translate(403 246)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="10" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="9" fill="none"/>
+      </g>
+      <g id="Rectangle_135" data-name="Rectangle 135" transform="translate(410 226)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="5" height="14" stroke="none"/>
+        <rect x="0.5" y="0.5" width="4" height="13" fill="none"/>
+      </g>
+      <g id="Rectangle_136" data-name="Rectangle 136" transform="translate(421 221)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="26" stroke="none"/>
+        <rect x="0.5" y="0.5" height="25" fill="none"/>
+      </g>
+      <g id="Rectangle_137" data-name="Rectangle 137" transform="translate(431 221)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="1" height="26" stroke="none"/>
+        <rect x="0.5" y="0.5" height="25" fill="none"/>
+      </g>
+      <g id="Rectangle_138" data-name="Rectangle 138" transform="translate(422 246)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="10" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="9" fill="none"/>
+      </g>
+      <g id="Rectangle_139" data-name="Rectangle 139" transform="translate(429 226)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="5" height="14" stroke="none"/>
+        <rect x="0.5" y="0.5" width="4" height="13" fill="none"/>
+      </g>
+      <text id="K1" transform="translate(406 225)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">K1</tspan></text>
+      <text id="K2" transform="translate(425 225)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">K2</tspan></text>
+      <text id="Indicatorscherm" transform="translate(395 183)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">Indicatorscherm</tspan></text>
+      <g id="Rectangle_140" data-name="Rectangle 140" transform="translate(481 173)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="12" height="5" rx="2.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="11" height="4" rx="2" fill="none"/>
+      </g>
+      <g id="Rectangle_141" data-name="Rectangle 141" transform="translate(481 249)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="12" height="5" rx="2.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="11" height="4" rx="2" fill="none"/>
+      </g>
+      <text id="_2" data-name="+" transform="translate(486 172)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">+</tspan></text>
+      <text id="_--2" data-name="-" transform="translate(486.5 248)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">-</tspan></text>
+    </g>
+    <text id="B-2" data-name="B" transform="translate(39 115)" font-size="5" font-family="Novatica-Bold, Novatica" font-weight="700"><tspan x="0" y="0">B</tspan></text>
+    <g id="Rectangle_45-2" data-name="Rectangle 45" transform="translate(40 125)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="17" height="8" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="16" height="7" rx="3.5" fill="none"/>
+    </g>
+    <g id="Rectangle_46-2" data-name="Rectangle 46" transform="translate(40 158)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="17" height="8" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="16" height="7" rx="3.5" fill="none"/>
+    </g>
+    <g id="Rectangle_47-2" data-name="Rectangle 47" transform="translate(57 129)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="43" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="42" fill="none"/>
+    </g>
+    <g id="Rectangle_48-2" data-name="Rectangle 48" transform="translate(56 161)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="44" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="43" fill="none"/>
+    </g>
+    <rect id="Rectangle_49-2" data-name="Rectangle 49" width="13" height="3" transform="translate(66 127)" fill="#fff"/>
+    <g id="Ellipse_2-2" data-name="Ellipse 2" transform="translate(65 128)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+      <circle cx="1.5" cy="1.5" r="1" fill="none"/>
+    </g>
+    <g id="Ellipse_3-2" data-name="Ellipse 3" transform="translate(77 128)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="1.5" cy="1.5" r="1.5" stroke="none"/>
+      <circle cx="1.5" cy="1.5" r="1" fill="none"/>
+    </g>
+    <line id="Line_7-2" data-name="Line 7" y1="4.5" x2="8" transform="translate(67.5 124.5)" fill="none" stroke="#000" stroke-width="1"/>
+    <line id="Line_9-2" data-name="Line 9" y1="32.5" transform="translate(86.5 129.5)" fill="none" stroke="#000" stroke-width="1"/>
+    <g id="Ellipse_4-2" data-name="Ellipse 4" transform="translate(79 137)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+      <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+    </g>
+    <line id="Line_10-2" data-name="Line 10" x2="10" y2="9" transform="translate(81.5 139.5)" fill="none" stroke="#000" stroke-width="1"/>
+    <line id="Line_11-2" data-name="Line 11" y1="10" x2="10" transform="translate(81.5 139.5)" fill="none" stroke="#000" stroke-width="1"/>
+    <text id="_1-10_VDC" data-name="1-10 VDC" transform="translate(450 173)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">1-10 VDC</tspan></text>
+    <text id="S1-2" data-name="S1" transform="translate(65 122)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">S1</tspan></text>
+    <text id="L1-2" data-name="L1" transform="translate(73 155)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">L1</tspan></text>
+    <g id="Ellipse_5-2" data-name="Ellipse 5" transform="translate(95 129)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+      <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+    </g>
+    <g id="Ellipse_6-2" data-name="Ellipse 6" transform="translate(95 135)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+      <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+    </g>
+    <g id="Ellipse_7-2" data-name="Ellipse 7" transform="translate(95 141)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="4" rx="4.5" ry="4" stroke="none"/>
+      <ellipse cx="4.5" cy="4" rx="4" ry="3.5" fill="none"/>
+    </g>
+    <g id="Ellipse_8-2" data-name="Ellipse 8" transform="translate(95 148)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="4" rx="4.5" ry="4" stroke="none"/>
+      <ellipse cx="4.5" cy="4" rx="4" ry="3.5" fill="none"/>
+    </g>
+    <g id="Ellipse_9-2" data-name="Ellipse 9" transform="translate(95 155)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+      <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+    </g>
+    <rect id="Rectangle_52-2" data-name="Rectangle 52" width="6" height="31" transform="translate(94 130)" fill="#fff"/>
+    <g id="Ellipse_10-2" data-name="Ellipse 10" transform="translate(110 129)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+      <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+    </g>
+    <g id="Ellipse_11-2" data-name="Ellipse 11" transform="translate(95 129)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+      <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+    </g>
+    <g id="Rectangle_53-2" data-name="Rectangle 53" transform="translate(114 129)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="52" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="51" fill="none"/>
+    </g>
+    <rect id="Rectangle_54-2" data-name="Rectangle 54" width="6" height="31" transform="translate(94 130)" fill="#fff"/>
+    <g id="Ellipse_12-2" data-name="Ellipse 12" transform="translate(110 135)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+      <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+    </g>
+    <g id="Ellipse_13-2" data-name="Ellipse 13" transform="translate(110 148)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+      <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+    </g>
+    <g id="Ellipse_14-2" data-name="Ellipse 14" transform="matrix(1, 0.017, -0.017, 1, 110.062, 140.922)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.75" rx="4.5" ry="3.75" stroke="none"/>
+      <ellipse cx="4.5" cy="3.75" rx="4" ry="3.25" fill="none"/>
+    </g>
+    <g id="Ellipse_15-2" data-name="Ellipse 15" transform="translate(110 155)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="4.5" cy="3.5" rx="4.5" ry="3.5" stroke="none"/>
+      <ellipse cx="4.5" cy="3.5" rx="4" ry="3" fill="none"/>
+    </g>
+    <g id="Rectangle_56-2" data-name="Rectangle 56" transform="translate(114 161)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="23" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="22" fill="none"/>
+    </g>
+    <rect id="Rectangle_55-2" data-name="Rectangle 55" width="6" height="31" transform="translate(115 130)" fill="#fff"/>
+    <text id="T1-2" data-name="T1" transform="translate(107 127)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">T1</tspan></text>
+    <g id="Rectangle_57-2" data-name="Rectangle 57" transform="translate(136 162)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="44" stroke="none"/>
+      <rect x="0.5" y="0.5" height="43" fill="none"/>
+    </g>
+    <g id="Rectangle_58-2" data-name="Rectangle 58" transform="translate(128 175)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="77" stroke="none"/>
+      <rect x="0.5" y="0.5" height="76" fill="none"/>
+    </g>
+    <g id="Rectangle_59-2" data-name="Rectangle 59" transform="translate(129 251)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="353" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="352" fill="none"/>
+    </g>
+    <g id="Rectangle_60-2" data-name="Rectangle 60" transform="translate(129 175)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="5" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="4" fill="none"/>
+    </g>
+    <g id="Rectangle_61-2" data-name="Rectangle 61" transform="translate(128 175)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="23" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="22" fill="none"/>
+    </g>
+    <g id="Ellipse_16-2" data-name="Ellipse 16" transform="translate(133 173)" fill="#fff" stroke="#000" stroke-width="1">
+      <ellipse cx="3.5" cy="3" rx="3.5" ry="3" stroke="none"/>
+      <ellipse cx="3.5" cy="3" rx="3" ry="2.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_62-2" data-name="Rectangle 62" width="9" height="3" transform="translate(132 176)" fill="#fff"/>
+    <g id="Rectangle_63-2" data-name="Rectangle 63" transform="translate(136 176)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="3" stroke="none"/>
+      <rect x="0.5" y="0.5" height="2" fill="none"/>
+    </g>
+    <rect id="Rectangle_64-2" data-name="Rectangle 64" width="4" height="1" transform="translate(135 172)" fill="#fff"/>
+    <g id="Rectangle_65-2" data-name="Rectangle 65" transform="translate(166 154.287) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="30" height="30" stroke="none"/>
+      <rect x="0.5" y="0.5" width="29" height="29" fill="none"/>
+    </g>
+    <g id="Group_1-2" data-name="Group 1" transform="translate(-30)">
+      <g id="Polygon_1-5" data-name="Polygon 1" transform="translate(186.657 158.615) rotate(45)">
+        <path d="M 7.190984725952148 7.5 L 0.8090147376060486 7.5 L 3.999999761581421 1.118029952049255 L 7.190984725952148 7.5 Z" stroke="none"/>
+        <path d="M 3.999999761581421 2.236070156097412 L 1.618034839630127 7 L 6.381964683532715 7 L 3.999999761581421 2.236070156097412 M 3.999999761581421 0 L 8 8 L -4.76837158203125e-07 8 L 3.999999761581421 0 Z" stroke="none" fill="#000"/>
+      </g>
+      <g id="Rectangle_66-6" data-name="Rectangle 66" transform="translate(186.525 158.318) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="8" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="7" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_2-2" data-name="Group 2" transform="translate(-9 20.385)">
+      <g id="Polygon_1-6" data-name="Polygon 1" transform="translate(186.657 158.615) rotate(45)">
+        <path d="M 7.190984725952148 7.5 L 0.8090147376060486 7.5 L 3.999999761581421 1.118029952049255 L 7.190984725952148 7.5 Z" stroke="none"/>
+        <path d="M 3.999999761581421 2.236070156097412 L 1.618034839630127 7 L 6.381964683532715 7 L 3.999999761581421 2.236070156097412 M 3.999999761581421 0 L 8 8 L -4.76837158203125e-07 8 L 3.999999761581421 0 Z" stroke="none" fill="#000"/>
+      </g>
+      <g id="Rectangle_66-7" data-name="Rectangle 66" transform="translate(186.525 158.318) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="8" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="7" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_3-2" data-name="Group 3" transform="translate(339.781 -21.385) rotate(90)">
+      <g id="Polygon_1-7" data-name="Polygon 1" transform="translate(186.657 158.615) rotate(45)">
+        <path d="M 7.190984725952148 7.5 L 0.8090147376060486 7.5 L 3.999999761581421 1.118029952049255 L 7.190984725952148 7.5 Z" stroke="none"/>
+        <path d="M 3.999999761581421 2.236070156097412 L 1.618034839630127 7 L 6.381964683532715 7 L 3.999999761581421 2.236070156097412 M 3.999999761581421 0 L 8 8 L -4.76837158203125e-07 8 L 3.999999761581421 0 Z" stroke="none" fill="#000"/>
+      </g>
+      <g id="Rectangle_66-8" data-name="Rectangle 66" transform="translate(186.525 158.318) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="8" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="7" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_4-2" data-name="Group 4" transform="translate(318.781 -2) rotate(90)">
+      <g id="Polygon_1-8" data-name="Polygon 1" transform="translate(186.657 158.615) rotate(45)">
+        <path d="M 7.190984725952148 7.5 L 0.8090147376060486 7.5 L 3.999999761581421 1.118029952049255 L 7.190984725952148 7.5 Z" stroke="none"/>
+        <path d="M 3.999999761581421 2.236070156097412 L 1.618034839630127 7 L 6.381964683532715 7 L 3.999999761581421 2.236070156097412 M 3.999999761581421 0 L 8 8 L -4.76837158203125e-07 8 L 3.999999761581421 0 Z" stroke="none" fill="#000"/>
+      </g>
+      <g id="Rectangle_66-9" data-name="Rectangle 66" transform="translate(186.525 158.318) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="8" height="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="7" fill="none"/>
+      </g>
+    </g>
+    <g id="Rectangle_67-2" data-name="Rectangle 67" transform="translate(136 205)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="30" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="29" fill="none"/>
+    </g>
+    <g id="Rectangle_68-2" data-name="Rectangle 68" transform="translate(165.5 196)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="10" stroke="none"/>
+      <rect x="0.5" y="0.5" height="9" fill="none"/>
+    </g>
+    <g id="Rectangle_69-2" data-name="Rectangle 69" transform="translate(202 175)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="20" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" fill="none"/>
+    </g>
+    <g id="Rectangle_70-2" data-name="Rectangle 70" transform="translate(129 126)" fill="#e3e3e3" stroke="#000" stroke-width="1">
+      <rect width="17" height="8" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="16" height="7" rx="3.5" fill="none"/>
+    </g>
+    <text id="F1-2" data-name="F1" transform="translate(145 125)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">F1</tspan></text>
+    <g id="Rectangle_71-2" data-name="Rectangle 71" transform="translate(165.5 129)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="26" stroke="none"/>
+      <rect x="0.5" y="0.5" height="25" fill="none"/>
+    </g>
+    <g id="Rectangle_72-2" data-name="Rectangle 72" transform="translate(201.5 130)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="45.5" stroke="none"/>
+      <rect x="0.5" y="0.5" height="44.5" fill="none"/>
+    </g>
+    <g id="Rectangle_73-2" data-name="Rectangle 73" transform="translate(201.5 175)" fill="#fff" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_74-2" data-name="Rectangle 74" transform="translate(222 173)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="14" height="5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="13" height="4" fill="none"/>
+    </g>
+    <g id="Rectangle_75-2" data-name="Rectangle 75" transform="translate(202 130)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="43" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="42" fill="none"/>
+    </g>
+    <g id="Rectangle_76-2" data-name="Rectangle 76" transform="translate(236 175)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="37" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="36" fill="none"/>
+    </g>
+    <g id="Rectangle_77-2" data-name="Rectangle 77" transform="translate(256 137)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="38" stroke="none"/>
+      <rect x="0.5" y="0.5" height="37" fill="none"/>
+    </g>
+    <g id="Rectangle_78-2" data-name="Rectangle 78" transform="translate(252 137)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="9" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="8" fill="none"/>
+    </g>
+    <line id="Line_12-2" data-name="Line 12" x2="8" y2="7" transform="translate(252.5 137.5) rotate(180)" fill="none" stroke="#000" stroke-width="1"/>
+    <line id="Line_13-2" data-name="Line 13" x1="7" y2="7" transform="translate(260.5 130.5)" fill="none" stroke="#000" stroke-width="1"/>
+    <g id="Rectangle_79-2" data-name="Rectangle 79" transform="translate(267 130)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="68" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="67" fill="none"/>
+    </g>
+    <g id="Path_1-2" data-name="Path 1" transform="translate(251.676 135.149) rotate(140)">
+      <path d="M 0.5770277380943298 2.303824901580811 L 1.328896880149841 0.9478760361671448 L 1.932976603507996 2.231887340545654 L 0.5770277380943298 2.303824901580811 Z" stroke="none"/>
+      <path d="M 1.365405559539795 -0.1490421295166016 L 2.701915502548218 2.691797971725464 L -0.2980844974517822 2.850957870483398 L 1.365405559539795 -0.1490421295166016 Z" stroke="none" fill="#000"/>
+    </g>
+    <g id="Rectangle_66-10" data-name="Rectangle 66" transform="translate(252.838 134.869) rotate(135)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="4.428" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="3.428" fill="none"/>
+    </g>
+    <g id="Rectangle_80-2" data-name="Rectangle 80" transform="translate(256 175)" fill="#fff" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_81-2" data-name="Rectangle 81" transform="translate(272 168)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="42" height="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="41" height="14" fill="none"/>
+    </g>
+    <text id="IN-2" data-name="IN" transform="translate(274 177.5)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">IN</tspan></text>
+    <text id="UIT_2" data-name="UIT
+" transform="translate(302 177.5)" font-size="6" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">UIT</tspan><tspan x="0" y="6"></tspan></text>
+    <text id="GND_2" data-name="GND
+
+" transform="translate(291 172.5) rotate(90)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">GND</tspan><tspan x="0" y="5"></tspan><tspan x="0" y="10"></tspan></text>
+    <g id="Rectangle_82-2" data-name="Rectangle 82" transform="translate(314 175)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="168" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="167" fill="none"/>
+    </g>
+    <g id="Rectangle_83-2" data-name="Rectangle 83" transform="translate(334 130)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="46" stroke="none"/>
+      <rect x="0.5" y="0.5" height="45" fill="none"/>
+    </g>
+    <g id="Rectangle_85-2" data-name="Rectangle 85" transform="translate(292 183)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="69" stroke="none"/>
+      <rect x="0.5" y="0.5" height="68" fill="none"/>
+    </g>
+    <g id="Rectangle_86-2" data-name="Rectangle 86" transform="translate(201.5 176)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="75" stroke="none"/>
+      <rect x="0.5" y="0.5" height="74" fill="none"/>
+    </g>
+    <g id="Rectangle_88-2" data-name="Rectangle 88" transform="translate(197 208)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="10" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="9" fill="none"/>
+    </g>
+    <g id="Ellipse_17-2" data-name="Ellipse 17" transform="translate(197 209.9)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_89-2" data-name="Rectangle 89" width="12" height="1" transform="translate(196 209)" fill="#fff"/>
+    <rect id="Rectangle_90-2" data-name="Rectangle 90" width="12" height="8" transform="translate(196 212)" fill="#fff"/>
+    <g id="Rectangle_91-2" data-name="Rectangle 91" transform="translate(201.5 210)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="10" stroke="none"/>
+      <rect x="0.5" y="0.5" height="9" fill="none"/>
+    </g>
+    <text id="C1-2" data-name="C1" transform="translate(207 206)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">C1</tspan></text>
+    <g id="Rectangle_92-2" data-name="Rectangle 92" transform="translate(256 176)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="75" stroke="none"/>
+      <rect x="0.5" y="0.5" height="74" fill="none"/>
+    </g>
+    <g id="Rectangle_93-2" data-name="Rectangle 93" transform="translate(251.5 208)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="10" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="9" fill="none"/>
+    </g>
+    <g id="Ellipse_18-2" data-name="Ellipse 18" transform="translate(251.5 209.9)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_94-2" data-name="Rectangle 94" width="12" height="1" transform="translate(250.5 209)" fill="#fff"/>
+    <rect id="Rectangle_95-2" data-name="Rectangle 95" width="12" height="8" transform="translate(250.5 212)" fill="#fff"/>
+    <g id="Rectangle_96-2" data-name="Rectangle 96" transform="translate(256 210)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="10" stroke="none"/>
+      <rect x="0.5" y="0.5" height="9" fill="none"/>
+    </g>
+    <text id="C2_2" data-name="C2
+" transform="translate(261.5 206)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">C2</tspan><tspan x="0" y="5"></tspan></text>
+    <g id="Rectangle_97-2" data-name="Rectangle 97" transform="translate(353.5 175)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="76" stroke="none"/>
+      <rect x="0.5" y="0.5" height="75" fill="none"/>
+    </g>
+    <g id="Rectangle_98-2" data-name="Rectangle 98" transform="translate(349 207)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="10" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="9" fill="none"/>
+    </g>
+    <g id="Ellipse_19-2" data-name="Ellipse 19" transform="translate(349 208.9)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_99-2" data-name="Rectangle 99" width="12" height="1" transform="translate(348 208)" fill="#fff"/>
+    <rect id="Rectangle_100-2" data-name="Rectangle 100" width="12" height="8" transform="translate(348 211)" fill="#fff"/>
+    <g id="Rectangle_101-2" data-name="Rectangle 101" transform="translate(353.5 209)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="10" stroke="none"/>
+      <rect x="0.5" y="0.5" height="9" fill="none"/>
+    </g>
+    <text id="C3_2" data-name="C3
+" transform="translate(359 205)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">C3</tspan><tspan x="0" y="5"></tspan></text>
+    <g id="Rectangle_102-2" data-name="Rectangle 102" transform="translate(334 176)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="34" stroke="none"/>
+      <rect x="0.5" y="0.5" height="33" fill="none"/>
+    </g>
+    <g id="Rectangle_103-2" data-name="Rectangle 103" transform="translate(296 210)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="39" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="38" fill="none"/>
+    </g>
+    <g id="Rectangle_104-2" data-name="Rectangle 104" transform="translate(292 196)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="43" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="42" fill="none"/>
+    </g>
+    <g id="Rectangle_105-2" data-name="Rectangle 105" transform="translate(292 196)" fill="#fff" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_106-2" data-name="Rectangle 106" transform="translate(334 196)" fill="#fff" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_107-2" data-name="Rectangle 107" transform="translate(334 175)" fill="#fff" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_108-2" data-name="Rectangle 108" transform="translate(353.5 175)" fill="#fff" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_109-2" data-name="Rectangle 109" transform="translate(290 204)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="5" height="14" stroke="none"/>
+      <rect x="0.5" y="0.5" width="4" height="13" fill="none"/>
+    </g>
+    <g id="Polygon_2-2" data-name="Polygon 2" transform="translate(295 213.5) rotate(-90)">
+      <path d="M 4.792900085449219 2.5 L 1.207100033760071 2.5 L 3 0.707099974155426 L 4.792900085449219 2.5 Z" stroke="none"/>
+      <path d="M 3 1.414219975471497 L 2.414220094680786 2 L 3.585779905319214 2 L 3 1.414219975471497 M 3 0 L 6 3 L 0 3 L 3 0 Z" stroke="none" fill="#000"/>
+    </g>
+    <g id="Rectangle_110-2" data-name="Rectangle 110" transform="translate(332 179)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="5" height="14" stroke="none"/>
+      <rect x="0.5" y="0.5" width="4" height="13" fill="none"/>
+    </g>
+    <text id="W1-2" data-name="W1" transform="translate(297 205)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">W1</tspan></text>
+    <text id="W2-2" data-name="W2" transform="translate(340 182)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">W2</tspan></text>
+    <g id="Rectangle_111-2" data-name="Rectangle 111" transform="translate(201.5 251)" fill="red" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_112-2" data-name="Rectangle 112" transform="translate(292 251)" fill="red" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_113-2" data-name="Rectangle 113" transform="translate(353.5 251)" fill="red" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_114-2" data-name="Rectangle 114" transform="translate(393 251)" fill="red" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_115-2" data-name="Rectangle 115" transform="translate(393 176)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="75" stroke="none"/>
+      <rect x="0.5" y="0.5" height="74" fill="none"/>
+    </g>
+    <g id="Rectangle_116-2" data-name="Rectangle 116" transform="translate(373 184)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="65" height="37" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="64" height="36" rx="5.5" fill="none"/>
+    </g>
+    <g id="Rectangle_117-2" data-name="Rectangle 117" transform="translate(438 191)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="14" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="13" fill="none"/>
+    </g>
+    <g id="Rectangle_118-2" data-name="Rectangle 118" transform="translate(438 210)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="14" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="13" fill="none"/>
+    </g>
+    <g id="Rectangle_119-2" data-name="Rectangle 119" transform="translate(452 191)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="6" stroke="none"/>
+      <rect x="0.5" y="0.5" height="5" fill="none"/>
+    </g>
+    <g id="Rectangle_120-2" data-name="Rectangle 120" transform="translate(448 196)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="9" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="8" fill="none"/>
+    </g>
+    <g id="Rectangle_121-2" data-name="Rectangle 121" transform="translate(452 199)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_122-2" data-name="Rectangle 122" transform="translate(450 199)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="5" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="4" fill="none"/>
+    </g>
+    <g id="Rectangle_123-2" data-name="Rectangle 123" transform="translate(452 200)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="11" stroke="none"/>
+      <rect x="0.5" y="0.5" height="10" fill="none"/>
+    </g>
+    <g id="Rectangle_124-2" data-name="Rectangle 124" transform="translate(450 200)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="5" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="4" fill="none"/>
+    </g>
+    <text id="_3" data-name="+" transform="translate(457 195)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">+</tspan></text>
+    <text id="_--3" data-name="-" transform="translate(447 203)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">-</tspan></text>
+    <text id="_9V-2" data-name="9V" transform="translate(455 205)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">9V</tspan></text>
+    <g id="Rectangle_125-2" data-name="Rectangle 125" transform="translate(256 251)" fill="red" stroke="red" stroke-width="1">
+      <rect width="1" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" fill="none"/>
+    </g>
+    <g id="Rectangle_126-2" data-name="Rectangle 126" transform="translate(402 221)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="26" stroke="none"/>
+      <rect x="0.5" y="0.5" height="25" fill="none"/>
+    </g>
+    <g id="Rectangle_131-2" data-name="Rectangle 131" transform="translate(412 221)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="26" stroke="none"/>
+      <rect x="0.5" y="0.5" height="25" fill="none"/>
+    </g>
+    <g id="Rectangle_134-2" data-name="Rectangle 134" transform="translate(403 246)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="10" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="9" fill="none"/>
+    </g>
+    <g id="Rectangle_135-2" data-name="Rectangle 135" transform="translate(410 226)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="5" height="14" stroke="none"/>
+      <rect x="0.5" y="0.5" width="4" height="13" fill="none"/>
+    </g>
+    <g id="Rectangle_136-2" data-name="Rectangle 136" transform="translate(421 221)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="26" stroke="none"/>
+      <rect x="0.5" y="0.5" height="25" fill="none"/>
+    </g>
+    <g id="Rectangle_137-2" data-name="Rectangle 137" transform="translate(431 221)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="1" height="26" stroke="none"/>
+      <rect x="0.5" y="0.5" height="25" fill="none"/>
+    </g>
+    <g id="Rectangle_138-2" data-name="Rectangle 138" transform="translate(422 246)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="10" height="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="9" fill="none"/>
+    </g>
+    <g id="Rectangle_139-2" data-name="Rectangle 139" transform="translate(429 226)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="5" height="14" stroke="none"/>
+      <rect x="0.5" y="0.5" width="4" height="13" fill="none"/>
+    </g>
+    <text id="K1-2" data-name="K1" transform="translate(406 225)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">K1</tspan></text>
+    <text id="K2-2" data-name="K2" transform="translate(425 225)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">K2</tspan></text>
+    <text id="Indicatorscherm-2" data-name="Indicatorscherm" transform="translate(395 183)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">Indicatorscherm</tspan></text>
+    <g id="Rectangle_140-2" data-name="Rectangle 140" transform="translate(481 173)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="12" height="5" rx="2.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="11" height="4" rx="2" fill="none"/>
+    </g>
+    <g id="Rectangle_141-2" data-name="Rectangle 141" transform="translate(481 249)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="12" height="5" rx="2.5" stroke="none"/>
+      <rect x="0.5" y="0.5" width="11" height="4" rx="2" fill="none"/>
+    </g>
+    <text id="_4" data-name="+" transform="translate(486 172)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">+</tspan></text>
+    <text id="_--4" data-name="-" transform="translate(486.5 248)" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">-</tspan></text>
+  </g>
+</svg>
